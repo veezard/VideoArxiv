@@ -1,0 +1,19 @@
+cradle:
+  stack:
+    - path: "./src"
+      component: "videoarxiv:lib"
+
+    - path: "./app/main.hs"
+      component: "videoarxiv:exe:videoarxiv"
+
+    - path: "./app/devel.hs"
+      component: "videoarxiv:exe:videoarxiv"
+
+    - path: "./app/DevelMain.hs"
+      component: "videoarxiv:exe:videoarxiv"
+
+    - path: "./app/Paths_videoarxiv.hs"
+      component: "videoarxiv:exe:videoarxiv"
+
+    - path: "./test"
+      component: "videoarxiv:test:videoarxiv-test"

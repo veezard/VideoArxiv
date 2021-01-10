@@ -1,0 +1,108 @@
+
+body { 
+	    margin:9pt 9pt 0 9pt; 
+	    padding:0; 
+	    background:#F8F8F8; 
+	    font-family: "Century Gothic", sans-serif;
+	   
+	} 
+
+a {text-decoration:none;}
+a:link {color:#000066;}      /* unvisited link */
+a:visited {color:#000066;}  /* visited link */
+
+
+
+
+
+/* Header used anouncing page names */
+h2{ 
+	text-align:center;
+	font-size:25pt;
+	padding:0 0 0 0;
+	margin:0 0 0 0;
+	
+	
+}
+/* Contain text such as "Name:", "Email:" in user, speaker and talks pages */
+.formSpecs{
+	font-size:20pt;
+	display: inline; 
+
+}
+.formData{
+  font-size: 15pt;
+  display: inline;
+}
+/* div containing title and link on the left */
+#header {
+	position:relative;
+  margin: 0 2% 0 2%;
+	}
+/* div containing the logo itself inside header div */
+#logo{
+	margin:0 0 0 0;
+	padding: 0 0 0 0;
+	font-size:40pt;
+	display: inline; 
+	
+
+}
+/* divs containing links in the menu */
+.menulink{
+	margin: 0 0 0 0;
+	padding: 0 5pt 0 0;
+	font-size:20pt ;
+	display: inline; 
+	
+}
+
+/* div containing search and right side menu */
+#search {
+	position:relative;
+  text-align: center;
+  margin:20pt;
+}
+/*There is only one input field on the site for now.*/
+input{
+    font-size: 15pt;
+}
+/* div containing the paginator */
+.paginator{ text-align:center;
+}
+/* div containing flash messages when present */
+#flash_message {
+}
+
+/* main body div */
+#main_body {
+	position:relative;
+    padding: 5pt 10% 0 10%;
+	margin:0 0 0 0;
+}
+
+#newtalkdiv{
+	text-align:center;
+}
+
+ol {
+  -moz-column-count: 3;
+  -webkit-column-count: 3;
+  column-count: 3;
+}
+
+.broken_link{
+
+	color:red;
+	font-size:1.5em;
+}
+
+/*Top and bottom horizontal lines*/
+hr{
+  height:1px;
+  background-color: black;
+}
+
+footer{
+  margin: 2% 2%
+}

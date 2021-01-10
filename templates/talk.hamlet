@@ -1,0 +1,47 @@
+<h2>
+  Talk page
+$maybe title <- talkTitle talk
+  <div .formSpecs>
+    Title: #
+  <div .formData>
+    #{title}
+  <br>
+$nothing
+  <div>
+
+$maybe speakerAndId <- maybeSpeakerAndId 
+  <div .formSpecs>
+    Speaker: #
+  <div .formData>
+    <a href=@{SpeakerR $ fromIntegral $ fromSqlKey $ snd speakerAndId}>
+      #{fst speakerAndId}
+  <br>
+$nothing
+  <div>
+
+$maybe abstract <- talkAbstract talk
+  <div .formSpecs>
+    Abstract: #
+  <div .formData>
+    #{abstract}
+  <br>
+$nothing
+  <div>
+
+<div .formSpecs>
+  Link: #
+<div .formData>
+  <a href="#{talkLink talk}">
+    #{talkLink talk}
+<br>
+
+$maybe workshopAndId <- maybeWorkshopAndId
+  <div .formSpecs>
+    Workshop: #
+  <div .formData>
+    <a href=@{WorkshopR $ fromIntegral $ fromSqlKey $ snd workshopAndId }>    
+      #{workshopTitle $ fst workshopAndId}
+  <br>
+$nothing
+  <div>
+

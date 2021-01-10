@@ -1,0 +1,27 @@
+
+<!-- Static navbar -->
+<div #header>
+    <div #logo>
+        VideoArxiv
+    <br>
+    <div .menulink>
+        <a href=@{HomeR}>Home
+    <div .menulink>
+        <a href=@{WorkshopsR}> Workshops
+    <div .menulink>
+        <a href=@{SpeakersR}> Speakers
+    <div #search>
+        <form #searchForm action=@{HomeR} method="get">
+            <input type="hidden" name="page" value="1">
+            <input type="text" name="query" size="50">
+            <input type="submit" value="Search">
+    <hr>
+
+<!-- Page Contents -->
+<div #main_body>
+    ^{widget}
+
+<!-- Footer -->
+<footer>
+    <hr>
+    #{appCopyright $ appSettings master}

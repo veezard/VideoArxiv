@@ -1,0 +1,20 @@
+-- By default this file is used by `persistFileWith` in Model.hs (which is imported by Foundation.hs)
+-- Syntax for this file here: https://github.com/yesodweb/persistent/blob/master/docs/Persistent-entity-syntax.md
+Talk
+    title Text Maybe
+    abstract Text Maybe
+    link Text 
+    speakerName Text Maybe
+    speakerId SpeakerId Maybe
+    workshopId WorkshopId Maybe
+    UniqueLink link
+    deriving Show
+Speaker
+    firstName Text
+    lastName Text
+    SpeakerName firstName lastName
+    deriving Show
+Workshop
+    title Text
+    UniqueTitle title
+    deriving Show
