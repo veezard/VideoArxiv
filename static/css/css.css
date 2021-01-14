@@ -135,4 +135,6 @@ ol{
     column-count: 1;
 }
 
-
+#speakerList{
+  column-count: 3
+}

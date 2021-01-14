@@ -13,10 +13,9 @@ import Control.Monad.Trans.Maybe
 import Data.FileEmbed (embedFile)
 import Data.Function ((&))
 import Database.Persist.Sql (fromSqlKey, toSqlKey)
+import GHC.Base (ord, unsafeChr)
 import Import
 import Prelude ((!!), fromIntegral)
-import Text.Julius (RawJS(..))
-import Text.Read (readMaybe)
 import Yesod.Paginator
 import Yesod.Paginator.Pages (pageNumber)
 
@@ -110,10 +109,11 @@ getWorkshopR requestWorkshopId = do
 
 getSpeakersR :: Handler Html
 getSpeakersR = do
+  maybeInitial <- lookupGetParam "p"
+  let initial = maybeInitial & liftM unpack >>= headMay & flip fromMaybe $ 'A'
   let perPage = 20
-  pages <- runDB $ selectPaginated perPage [] [Asc SpeakerLastName]
-  let page = pagesCurrent pages :: Page (Entity Speaker)
-  let enumStart = fromIntegral (pageNumber page - 1) * fromIntegral perPage + 1
+  speakersToShow <-
+    runDB $ selectList [SpeakerLastName `like` pack (initial : ['%'])] []
   defaultLayout $ do $(widgetFile "speakers")
 
 getWorkshopsR :: Handler Html
@@ -201,8 +201,35 @@ match ::
   -> Filter record -- ^ Resulting filter
 match field val = Filter field (Left $ Just val) (BackendSpecificFilter "match")
 
+like :: EntityField record Text -> Text -> Filter record
+like field val = Filter field (Left $ val) (BackendSpecificFilter "like")
+
 ellipsed' :: Int -> Pages a -> WidgetFor m ()
 ellipsed' num pages =
   if (pages & pagesCurrent & pageItems & length) == 0
     then [whamlet|<div>|]
     else ellipsed (fromIntegral num) pages
+
+alphabeticalPaginator :: Char -> Widget
+alphabeticalPaginator c =
+  if argIsLetter
+    then [whamlet|
+<ul .pagination>
+  $forall a <- lettersBefore
+    <li .prev>
+      <a href="?p=#{a}">
+        #{a}
+  <li .active>
+    #{ c}
+  $forall a <- lettersAfter
+    <li .next>
+      <a href="?p=#{a}">
+        #{a}
+|]
+    else [whamlet|
+    <div>
+      |]
+  where
+    argIsLetter = c >= 'A' && c <= 'Z'
+    lettersBefore = map unsafeChr [ord 'A' .. ord c - 1]
+    lettersAfter = map unsafeChr [ord c + 1 .. ord 'Z']
