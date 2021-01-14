@@ -6,6 +6,13 @@ $newline never
 \<!--[if gt IE 8]><!-->
 <html class="no-js" lang="en"> <!--<![endif]-->
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V8M1PJL4ML">
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-V8M1PJL4ML', {cookie_expires:0});
     <meta charset="UTF-8">
 
     <title>VideoArxiv
@@ -15,6 +22,7 @@ $newline never
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     ^{pageHead pc}
+
 
 
   <body>
