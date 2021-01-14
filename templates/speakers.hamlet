@@ -1,0 +1,8 @@
+<h2>
+  Speakers
+<br>
+^{ellipsed' 5 pages}
+<ol start="#{show enumStart}">
+  $forall speaker <- pageItems page
+           ^{showSpeaker speaker  }
+^{ellipsed' 5 pages}

@@ -21,5 +21,5 @@ import Database.Persist.Quasi
 -- at:
 -- http://www.yesodweb.com/book/persistent/
 share
-  [mkPersist sqlSettings, mkMigrate "migrateAll"]
+  [mkPersist sqlSettings]
   $(persistFileWith lowerCaseSettings "config/models.persistentmodels")

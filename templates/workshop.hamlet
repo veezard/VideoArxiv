@@ -1,0 +1,8 @@
+<h2>
+  #{workshopTitle workshop}
+
+^{ellipsed' 5 pages}
+<ol start="#{show enumStart}">
+  $forall talk <- pageItems page
+           ^{showTalk talk}
+^{ellipsed' 5 pages}

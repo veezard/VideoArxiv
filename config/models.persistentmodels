@@ -7,7 +7,6 @@ Talk
     speakerName Text Maybe
     speakerId SpeakerId Maybe
     workshopId WorkshopId Maybe
-    UniqueLink link
     deriving Show
 Speaker
     firstName Text

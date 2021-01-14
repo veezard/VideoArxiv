@@ -1,7 +1,8 @@
 <h2>
   Workshops
 <br>
-$maybe page <- maybePageNumber
-  #{page}
-$nothing
-  <div>
+^{ellipsed' 5 pages}
+<ol start="#{show enumStart}">
+  $forall workshop <- pageItems page
+           ^{showWorkshop workshop  }
+^{ellipsed' 5 pages}

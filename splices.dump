@@ -1,0 +1,3039 @@
+videoarxiv-0.0.0: unregistering (local file changes: app/DevelMain.hs app/main.hs package.yaml src/Application.hs src/Foundation.hs src/Handlers.hs sr...)
+Building all executables for `videoarxiv' once. After a successful build of all of them, only specified executables will be rebuilt.
+videoarxiv> configure (lib + exe)
+Configuring videoarxiv-0.0.0...
+videoarxiv> build (lib + exe)
+Preprocessing library for videoarxiv-0.0.0..
+Building library for videoarxiv-0.0.0..
+[1 of 9] Compiling Model
+/home/val/compsci/haskell/videoarxiv/src/Model.hs:25:5-70: Splicing expression
+    persistFileWith lowerCaseSettings "config/models.persistentmodels"
+  ======>
+    [(((((((((EntityDef (HaskellName (packPTH "Talk")))
+               (DBName (packPTH "talk")))
+              (((((((FieldDef (HaskellName (packPTH "Id")))
+                      (DBName (packPTH "id")))
+                     ((FTTypeCon Nothing) (packPTH "TalkId")))
+                    SqlInt64)
+                   [])
+                  True)
+                 ((ForeignRef (HaskellName (packPTH "Talk")))
+                    ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))))
+             [])
+            [((((((FieldDef (HaskellName (packPTH "title")))
+                    (DBName (packPTH "title")))
+                   ((FTTypeCon Nothing) (packPTH "Text")))
+                  (SqlOther (packPTH "SqlType unset for title")))
+                 [packPTH "Maybe"])
+                True)
+               NoReference,
+             ((((((FieldDef (HaskellName (packPTH "abstract")))
+                    (DBName (packPTH "abstract")))
+                   ((FTTypeCon Nothing) (packPTH "Text")))
+                  (SqlOther (packPTH "SqlType unset for abstract")))
+                 [packPTH "Maybe"])
+                True)
+               NoReference,
+             ((((((FieldDef (HaskellName (packPTH "link")))
+                    (DBName (packPTH "link")))
+                   ((FTTypeCon Nothing) (packPTH "Text")))
+                  (SqlOther (packPTH "SqlType unset for link")))
+                 [])
+                True)
+               NoReference,
+             ((((((FieldDef (HaskellName (packPTH "speakerName")))
+                    (DBName (packPTH "speaker_name")))
+                   ((FTTypeCon Nothing) (packPTH "Text")))
+                  (SqlOther (packPTH "SqlType unset for speakerName")))
+                 [packPTH "Maybe"])
+                True)
+               NoReference,
+             ((((((FieldDef (HaskellName (packPTH "speakerId")))
+                    (DBName (packPTH "speaker_id")))
+                   ((FTTypeCon Nothing) (packPTH "SpeakerId")))
+                  (SqlOther (packPTH "SqlType unset for speakerId")))
+                 [packPTH "Maybe"])
+                True)
+               ((ForeignRef (HaskellName (packPTH "Speaker")))
+                  ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64"))),
+             ((((((FieldDef (HaskellName (packPTH "workshopId")))
+                    (DBName (packPTH "workshop_id")))
+                   ((FTTypeCon Nothing) (packPTH "WorkshopId")))
+                  (SqlOther (packPTH "SqlType unset for workshopId")))
+                 [packPTH "Maybe"])
+                True)
+               ((ForeignRef (HaskellName (packPTH "Workshop")))
+                  ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))])
+           [(((UniqueDef (HaskellName (packPTH "UniqueLink")))
+                (DBName (packPTH "unique_link")))
+               [(HaskellName (packPTH "link"), DBName (packPTH "link"))])
+              []])
+          [])
+         [packPTH "Show"])
+        (Data.Map.Internal.fromList []))
+       False
+       {entityFields = [((((((FieldDef (HaskellName (packPTH "title")))
+                               (DBName (packPTH "title")))
+                              ((FTTypeCon Nothing) (packPTH "Text")))
+                             (persistent-2.9.2:Database.Persist.Sql.Class.sqlType
+                                (Data.Proxy.Proxy :: Data.Proxy.Proxy Text)))
+                            [packPTH "Maybe"])
+                           True)
+                          NoReference,
+                        ((((((FieldDef (HaskellName (packPTH "abstract")))
+                               (DBName (packPTH "abstract")))
+                              ((FTTypeCon Nothing) (packPTH "Text")))
+                             (persistent-2.9.2:Database.Persist.Sql.Class.sqlType
+                                (Data.Proxy.Proxy :: Data.Proxy.Proxy Text)))
+                            [packPTH "Maybe"])
+                           True)
+                          NoReference,
+                        ((((((FieldDef (HaskellName (packPTH "link")))
+                               (DBName (packPTH "link")))
+                              ((FTTypeCon Nothing) (packPTH "Text")))
+                             (persistent-2.9.2:Database.Persist.Sql.Class.sqlType
+                                (Data.Proxy.Proxy :: Data.Proxy.Proxy Text)))
+                            [])
+                           True)
+                          NoReference,
+                        ((((((FieldDef (HaskellName (packPTH "speakerName")))
+                               (DBName (packPTH "speaker_name")))
+                              ((FTTypeCon Nothing) (packPTH "Text")))
+                             (persistent-2.9.2:Database.Persist.Sql.Class.sqlType
+                                (Data.Proxy.Proxy :: Data.Proxy.Proxy Text)))
+                            [packPTH "Maybe"])
+                           True)
+                          NoReference,
+                        ((((((FieldDef (HaskellName (packPTH "speakerId")))
+                               (DBName (packPTH "speaker_id")))
+                              ((FTTypeCon Nothing) (packPTH "SpeakerId")))
+                             (persistent-2.9.2:Database.Persist.Sql.Class.sqlType
+                                (Data.Proxy.Proxy :: Data.Proxy.Proxy Int64)))
+                            [packPTH "Maybe"])
+                           True)
+                          ((ForeignRef (HaskellName (packPTH "Speaker")))
+                             ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64"))),
+                        ((((((FieldDef (HaskellName (packPTH "workshopId")))
+                               (DBName (packPTH "workshop_id")))
+                              ((FTTypeCon Nothing) (packPTH "WorkshopId")))
+                             (persistent-2.9.2:Database.Persist.Sql.Class.sqlType
+                                (Data.Proxy.Proxy :: Data.Proxy.Proxy Int64)))
+                            [packPTH "Maybe"])
+                           True)
+                          ((ForeignRef (HaskellName (packPTH "Workshop")))
+                             ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))],
+        entityId = ((((((FieldDef (HaskellName (packPTH "Id")))
+                          (DBName (packPTH "id")))
+                         ((FTTypeCon Nothing) (packPTH "TalkId")))
+                        (persistent-2.9.2:Database.Persist.Sql.Class.sqlType
+                           (Data.Proxy.Proxy :: Data.Proxy.Proxy Int64)))
+                       [])
+                      True)
+                     ((ForeignRef (HaskellName (packPTH "Talk")))
+                        ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))},
+     (((((((((EntityDef (HaskellName (packPTH "Speaker")))
+               (DBName (packPTH "speaker")))
+              (((((((FieldDef (HaskellName (packPTH "Id")))
+                      (DBName (packPTH "id")))
+                     ((FTTypeCon Nothing) (packPTH "SpeakerId")))
+                    SqlInt64)
+                   [])
+                  True)
+                 ((ForeignRef (HaskellName (packPTH "Speaker")))
+                    ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))))
+             [])
+            [((((((FieldDef (HaskellName (packPTH "firstName")))
+                    (DBName (packPTH "first_name")))
+                   ((FTTypeCon Nothing) (packPTH "Text")))
+                  (SqlOther (packPTH "SqlType unset for firstName")))
+                 [])
+                True)
+               NoReference,
+             ((((((FieldDef (HaskellName (packPTH "lastName")))
+                    (DBName (packPTH "last_name")))
+                   ((FTTypeCon Nothing) (packPTH "Text")))
+                  (SqlOther (packPTH "SqlType unset for lastName")))
+                 [])
+                True)
+               NoReference])
+           [(((UniqueDef (HaskellName (packPTH "SpeakerName")))
+                (DBName (packPTH "speaker_name")))
+               [(HaskellName (packPTH "firstName"), 
+                 DBName (packPTH "first_name")),
+                (HaskellName (packPTH "lastName"), DBName (packPTH "last_name"))])
+              []])
+          [])
+         [packPTH "Show"])
+        (Data.Map.Internal.fromList []))
+       False
+       {entityFields = [((((((FieldDef
+                                (HaskellName (packPTH "firstName")))
+                               (DBName (packPTH "first_name")))
+                              ((FTTypeCon Nothing) (packPTH "Text")))
+                             (persistent-2.9.2:Database.Persist.Sql.Class.sqlType
+                                (Data.Proxy.Proxy :: Data.Proxy.Proxy Text)))
+                            [])
+                           True)
+                          NoReference,
+                        ((((((FieldDef (HaskellName (packPTH "lastName")))
+                               (DBName (packPTH "last_name")))
+                              ((FTTypeCon Nothing) (packPTH "Text")))
+                             (persistent-2.9.2:Database.Persist.Sql.Class.sqlType
+                                (Data.Proxy.Proxy :: Data.Proxy.Proxy Text)))
+                            [])
+                           True)
+                          NoReference],
+        entityId = ((((((FieldDef (HaskellName (packPTH "Id")))
+                          (DBName (packPTH "id")))
+                         ((FTTypeCon Nothing) (packPTH "SpeakerId")))
+                        (persistent-2.9.2:Database.Persist.Sql.Class.sqlType
+                           (Data.Proxy.Proxy :: Data.Proxy.Proxy Int64)))
+                       [])
+                      True)
+                     ((ForeignRef (HaskellName (packPTH "Speaker")))
+                        ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))},
+     (((((((((EntityDef (HaskellName (packPTH "Workshop")))
+               (DBName (packPTH "workshop")))
+              (((((((FieldDef (HaskellName (packPTH "Id")))
+                      (DBName (packPTH "id")))
+                     ((FTTypeCon Nothing) (packPTH "WorkshopId")))
+                    SqlInt64)
+                   [])
+                  True)
+                 ((ForeignRef (HaskellName (packPTH "Workshop")))
+                    ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))))
+             [])
+            [((((((FieldDef (HaskellName (packPTH "title")))
+                    (DBName (packPTH "title")))
+                   ((FTTypeCon Nothing) (packPTH "Text")))
+                  (SqlOther (packPTH "SqlType unset for title")))
+                 [])
+                True)
+               NoReference])
+           [(((UniqueDef (HaskellName (packPTH "UniqueTitle")))
+                (DBName (packPTH "unique_title")))
+               [(HaskellName (packPTH "title"), DBName (packPTH "title"))])
+              []])
+          [])
+         [packPTH "Show"])
+        (Data.Map.Internal.fromList []))
+       False
+       {entityFields = [((((((FieldDef (HaskellName (packPTH "title")))
+                               (DBName (packPTH "title")))
+                              ((FTTypeCon Nothing) (packPTH "Text")))
+                             (persistent-2.9.2:Database.Persist.Sql.Class.sqlType
+                                (Data.Proxy.Proxy :: Data.Proxy.Proxy Text)))
+                            [])
+                           True)
+                          NoReference],
+        entityId = ((((((FieldDef (HaskellName (packPTH "Id")))
+                          (DBName (packPTH "id")))
+                         ((FTTypeCon Nothing) (packPTH "WorkshopId")))
+                        (persistent-2.9.2:Database.Persist.Sql.Class.sqlType
+                           (Data.Proxy.Proxy :: Data.Proxy.Proxy Int64)))
+                       [])
+                      True)
+                     ((ForeignRef (HaskellName (packPTH "Workshop")))
+                        ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))}]
+/home/val/compsci/haskell/videoarxiv/src/Model.hs:(23,1)-(25,71): Splicing declarations
+    share
+      [mkPersist sqlSettings, mkMigrate "migrateAll"]
+      ([(((((((((EntityDef (HaskellName (packPTH "Talk")))
+                  (DBName (packPTH "talk")))
+                 (((((((FieldDef (HaskellName (packPTH "Id")))
+                         (DBName (packPTH "id")))
+                        ((FTTypeCon Nothing) (packPTH "TalkId")))
+                       SqlInt64)
+                      [])
+                     True)
+                    ((ForeignRef (HaskellName (packPTH "Talk")))
+                       ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))))
+                [])
+               [((((((FieldDef (HaskellName (packPTH "title")))
+                       (DBName (packPTH "title")))
+                      ((FTTypeCon Nothing) (packPTH "Text")))
+                     (SqlOther (packPTH "SqlType unset for title")))
+                    [packPTH "Maybe"])
+                   True)
+                  NoReference,
+                ((((((FieldDef (HaskellName (packPTH "abstract")))
+                       (DBName (packPTH "abstract")))
+                      ((FTTypeCon Nothing) (packPTH "Text")))
+                     (SqlOther (packPTH "SqlType unset for abstract")))
+                    [packPTH "Maybe"])
+                   True)
+                  NoReference,
+                ((((((FieldDef (HaskellName (packPTH "link")))
+                       (DBName (packPTH "link")))
+                      ((FTTypeCon Nothing) (packPTH "Text")))
+                     (SqlOther (packPTH "SqlType unset for link")))
+                    [])
+                   True)
+                  NoReference,
+                ((((((FieldDef (HaskellName (packPTH "speakerName")))
+                       (DBName (packPTH "speaker_name")))
+                      ((FTTypeCon Nothing) (packPTH "Text")))
+                     (SqlOther (packPTH "SqlType unset for speakerName")))
+                    [packPTH "Maybe"])
+                   True)
+                  NoReference,
+                ((((((FieldDef (HaskellName (packPTH "speakerId")))
+                       (DBName (packPTH "speaker_id")))
+                      ((FTTypeCon Nothing) (packPTH "SpeakerId")))
+                     (SqlOther (packPTH "SqlType unset for speakerId")))
+                    [packPTH "Maybe"])
+                   True)
+                  ((ForeignRef (HaskellName (packPTH "Speaker")))
+                     ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64"))),
+                ((((((FieldDef (HaskellName (packPTH "workshopId")))
+                       (DBName (packPTH "workshop_id")))
+                      ((FTTypeCon Nothing) (packPTH "WorkshopId")))
+                     (SqlOther (packPTH "SqlType unset for workshopId")))
+                    [packPTH "Maybe"])
+                   True)
+                  ((ForeignRef (HaskellName (packPTH "Workshop")))
+                     ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))])
+              [(((UniqueDef (HaskellName (packPTH "UniqueLink")))
+                   (DBName (packPTH "unique_link")))
+                  [(HaskellName (packPTH "link"), DBName (packPTH "link"))])
+                 []])
+             [])
+            [packPTH "Show"])
+           (Data.Map.Internal.fromList []))
+          False
+          {entityFields = [((((((FieldDef (HaskellName (packPTH "title")))
+                                  (DBName (packPTH "title")))
+                                 ((FTTypeCon Nothing) (packPTH "Text")))
+                                (persistent-2.9.2:Database.Persist.Sql.Class.sqlType
+                                   (Data.Proxy.Proxy :: Data.Proxy.Proxy Text)))
+                               [packPTH "Maybe"])
+                              True)
+                             NoReference,
+                           ((((((FieldDef (HaskellName (packPTH "abstract")))
+                                  (DBName (packPTH "abstract")))
+                                 ((FTTypeCon Nothing) (packPTH "Text")))
+                                (persistent-2.9.2:Database.Persist.Sql.Class.sqlType
+                                   (Data.Proxy.Proxy :: Data.Proxy.Proxy Text)))
+                               [packPTH "Maybe"])
+                              True)
+                             NoReference,
+                           ((((((FieldDef (HaskellName (packPTH "link")))
+                                  (DBName (packPTH "link")))
+                                 ((FTTypeCon Nothing) (packPTH "Text")))
+                                (persistent-2.9.2:Database.Persist.Sql.Class.sqlType
+                                   (Data.Proxy.Proxy :: Data.Proxy.Proxy Text)))
+                               [])
+                              True)
+                             NoReference,
+                           ((((((FieldDef (HaskellName (packPTH "speakerName")))
+                                  (DBName (packPTH "speaker_name")))
+                                 ((FTTypeCon Nothing) (packPTH "Text")))
+                                (persistent-2.9.2:Database.Persist.Sql.Class.sqlType
+                                   (Data.Proxy.Proxy :: Data.Proxy.Proxy Text)))
+                               [packPTH "Maybe"])
+                              True)
+                             NoReference,
+                           ((((((FieldDef (HaskellName (packPTH "speakerId")))
+                                  (DBName (packPTH "speaker_id")))
+                                 ((FTTypeCon Nothing) (packPTH "SpeakerId")))
+                                (persistent-2.9.2:Database.Persist.Sql.Class.sqlType
+                                   (Data.Proxy.Proxy :: Data.Proxy.Proxy Int64)))
+                               [packPTH "Maybe"])
+                              True)
+                             ((ForeignRef (HaskellName (packPTH "Speaker")))
+                                ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64"))),
+                           ((((((FieldDef (HaskellName (packPTH "workshopId")))
+                                  (DBName (packPTH "workshop_id")))
+                                 ((FTTypeCon Nothing) (packPTH "WorkshopId")))
+                                (persistent-2.9.2:Database.Persist.Sql.Class.sqlType
+                                   (Data.Proxy.Proxy :: Data.Proxy.Proxy Int64)))
+                               [packPTH "Maybe"])
+                              True)
+                             ((ForeignRef (HaskellName (packPTH "Workshop")))
+                                ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))],
+           entityId = ((((((FieldDef (HaskellName (packPTH "Id")))
+                             (DBName (packPTH "id")))
+                            ((FTTypeCon Nothing) (packPTH "TalkId")))
+                           (persistent-2.9.2:Database.Persist.Sql.Class.sqlType
+                              (Data.Proxy.Proxy :: Data.Proxy.Proxy Int64)))
+                          [])
+                         True)
+                        ((ForeignRef (HaskellName (packPTH "Talk")))
+                           ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))},
+        (((((((((EntityDef (HaskellName (packPTH "Speaker")))
+                  (DBName (packPTH "speaker")))
+                 (((((((FieldDef (HaskellName (packPTH "Id")))
+                         (DBName (packPTH "id")))
+                        ((FTTypeCon Nothing) (packPTH "SpeakerId")))
+                       SqlInt64)
+                      [])
+                     True)
+                    ((ForeignRef (HaskellName (packPTH "Speaker")))
+                       ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))))
+                [])
+               [((((((FieldDef (HaskellName (packPTH "firstName")))
+                       (DBName (packPTH "first_name")))
+                      ((FTTypeCon Nothing) (packPTH "Text")))
+                     (SqlOther (packPTH "SqlType unset for firstName")))
+                    [])
+                   True)
+                  NoReference,
+                ((((((FieldDef (HaskellName (packPTH "lastName")))
+                       (DBName (packPTH "last_name")))
+                      ((FTTypeCon Nothing) (packPTH "Text")))
+                     (SqlOther (packPTH "SqlType unset for lastName")))
+                    [])
+                   True)
+                  NoReference])
+              [(((UniqueDef (HaskellName (packPTH "SpeakerName")))
+                   (DBName (packPTH "speaker_name")))
+                  [(HaskellName (packPTH "firstName"), 
+                    DBName (packPTH "first_name")),
+                   (HaskellName (packPTH "lastName"), DBName (packPTH "last_name"))])
+                 []])
+             [])
+            [packPTH "Show"])
+           (Data.Map.Internal.fromList []))
+          False
+          {entityFields = [((((((FieldDef
+                                   (HaskellName (packPTH "firstName")))
+                                  (DBName (packPTH "first_name")))
+                                 ((FTTypeCon Nothing) (packPTH "Text")))
+                                (persistent-2.9.2:Database.Persist.Sql.Class.sqlType
+                                   (Data.Proxy.Proxy :: Data.Proxy.Proxy Text)))
+                               [])
+                              True)
+                             NoReference,
+                           ((((((FieldDef (HaskellName (packPTH "lastName")))
+                                  (DBName (packPTH "last_name")))
+                                 ((FTTypeCon Nothing) (packPTH "Text")))
+                                (persistent-2.9.2:Database.Persist.Sql.Class.sqlType
+                                   (Data.Proxy.Proxy :: Data.Proxy.Proxy Text)))
+                               [])
+                              True)
+                             NoReference],
+           entityId = ((((((FieldDef (HaskellName (packPTH "Id")))
+                             (DBName (packPTH "id")))
+                            ((FTTypeCon Nothing) (packPTH "SpeakerId")))
+                           (persistent-2.9.2:Database.Persist.Sql.Class.sqlType
+                              (Data.Proxy.Proxy :: Data.Proxy.Proxy Int64)))
+                          [])
+                         True)
+                        ((ForeignRef (HaskellName (packPTH "Speaker")))
+                           ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))},
+        (((((((((EntityDef (HaskellName (packPTH "Workshop")))
+                  (DBName (packPTH "workshop")))
+                 (((((((FieldDef (HaskellName (packPTH "Id")))
+                         (DBName (packPTH "id")))
+                        ((FTTypeCon Nothing) (packPTH "WorkshopId")))
+                       SqlInt64)
+                      [])
+                     True)
+                    ((ForeignRef (HaskellName (packPTH "Workshop")))
+                       ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))))
+                [])
+               [((((((FieldDef (HaskellName (packPTH "title")))
+                       (DBName (packPTH "title")))
+                      ((FTTypeCon Nothing) (packPTH "Text")))
+                     (SqlOther (packPTH "SqlType unset for title")))
+                    [])
+                   True)
+                  NoReference])
+              [(((UniqueDef (HaskellName (packPTH "UniqueTitle")))
+                   (DBName (packPTH "unique_title")))
+                  [(HaskellName (packPTH "title"), DBName (packPTH "title"))])
+                 []])
+             [])
+            [packPTH "Show"])
+           (Data.Map.Internal.fromList []))
+          False
+          {entityFields = [((((((FieldDef (HaskellName (packPTH "title")))
+                                  (DBName (packPTH "title")))
+                                 ((FTTypeCon Nothing) (packPTH "Text")))
+                                (persistent-2.9.2:Database.Persist.Sql.Class.sqlType
+                                   (Data.Proxy.Proxy :: Data.Proxy.Proxy Text)))
+                               [])
+                              True)
+                             NoReference],
+           entityId = ((((((FieldDef (HaskellName (packPTH "Id")))
+                             (DBName (packPTH "id")))
+                            ((FTTypeCon Nothing) (packPTH "WorkshopId")))
+                           (persistent-2.9.2:Database.Persist.Sql.Class.sqlType
+                              (Data.Proxy.Proxy :: Data.Proxy.Proxy Int64)))
+                          [])
+                         True)
+                        ((ForeignRef (HaskellName (packPTH "Workshop")))
+                           ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))}])
+  ======>
+    instance PersistField Talk where
+      toPersistValue
+        = \ ent_aaxo
+            -> (PersistMap
+                  $ (GHC.List.zip
+                       ((GHC.Base.map Data.Text.pack)
+                          ["title", "abstract", "link", "speakerName", "speakerId",
+                           "workshopId"]))
+                      (GHC.Base.map toPersistValue $ toPersistFields ent_aaxo))
+      fromPersistValue
+        = ((\ x_aaxp
+              -> let
+                   columns_aaxq
+                     = unordered-containers-0.2.10.0:Data.HashMap.Strict.Base.fromList
+                         x_aaxp
+                 in
+                   (fromPersistValues
+                      $ (GHC.Base.map
+                           (\ name_aaxr
+                              -> case
+                                     (unordered-containers-0.2.10.0:Data.HashMap.Base.lookup
+                                        (Data.Text.pack name_aaxr))
+                                       columns_aaxq
+                                 of
+                                   Just v_aaxs -> v_aaxs
+                                   Nothing -> PersistNull)
+                           $ ["title", "abstract", "link", "speakerName", "speakerId",
+                              "workshopId"])))
+             <=< getPersistMap)
+    instance persistent-2.9.2:Database.Persist.Sql.Class.PersistFieldSql Talk where
+      persistent-2.9.2:Database.Persist.Sql.Class.sqlType _ = SqlString
+    instance PersistField Speaker where
+      toPersistValue
+        = \ ent_aaxt
+            -> (PersistMap
+                  $ (GHC.List.zip
+                       ((GHC.Base.map Data.Text.pack) ["firstName", "lastName"]))
+                      (GHC.Base.map toPersistValue $ toPersistFields ent_aaxt))
+      fromPersistValue
+        = ((\ x_aaxu
+              -> let
+                   columns_aaxv
+                     = unordered-containers-0.2.10.0:Data.HashMap.Strict.Base.fromList
+                         x_aaxu
+                 in
+                   (fromPersistValues
+                      $ (GHC.Base.map
+                           (\ name_aaxw
+                              -> case
+                                     (unordered-containers-0.2.10.0:Data.HashMap.Base.lookup
+                                        (Data.Text.pack name_aaxw))
+                                       columns_aaxv
+                                 of
+                                   Just v_aaxx -> v_aaxx
+                                   Nothing -> PersistNull)
+                           $ ["firstName", "lastName"])))
+             <=< getPersistMap)
+    instance persistent-2.9.2:Database.Persist.Sql.Class.PersistFieldSql Speaker where
+      persistent-2.9.2:Database.Persist.Sql.Class.sqlType _ = SqlString
+    instance PersistField Workshop where
+      toPersistValue
+        = \ ent_aaxy
+            -> (PersistMap
+                  $ (GHC.List.zip ((GHC.Base.map Data.Text.pack) ["title"]))
+                      (GHC.Base.map toPersistValue $ toPersistFields ent_aaxy))
+      fromPersistValue
+        = ((\ x_aaxz
+              -> let
+                   columns_aaxA
+                     = unordered-containers-0.2.10.0:Data.HashMap.Strict.Base.fromList
+                         x_aaxz
+                 in
+                   (fromPersistValues
+                      $ (GHC.Base.map
+                           (\ name_aaxB
+                              -> case
+                                     (unordered-containers-0.2.10.0:Data.HashMap.Base.lookup
+                                        (Data.Text.pack name_aaxB))
+                                       columns_aaxA
+                                 of
+                                   Just v_aaxC -> v_aaxC
+                                   Nothing -> PersistNull)
+                           $ ["title"])))
+             <=< getPersistMap)
+    instance persistent-2.9.2:Database.Persist.Sql.Class.PersistFieldSql Workshop where
+      persistent-2.9.2:Database.Persist.Sql.Class.sqlType _ = SqlString
+    data Talk
+      = Talk {talkTitle :: !(Maybe Text),
+              talkAbstract :: !(Maybe Text),
+              talkLink :: !Text,
+              talkSpeakerName :: !(Maybe Text),
+              talkSpeakerId :: !(Maybe (Key Speaker)),
+              talkWorkshopId :: !(Maybe (Key Workshop))}
+      deriving Show
+    type TalkId = Key Talk
+    instance PersistEntity Talk where
+      type PersistEntityBackend Talk = SqlBackend
+      data Unique Talk
+        = UniqueLink Text
+        deriving Show
+      newtype Key Talk
+        = TalkKey {unTalkKey :: (BackendKey SqlBackend)}
+        deriving (Show,
+                  Read,
+                  Eq,
+                  Ord,
+                  PathPiece,
+                  http-api-data-0.4.1.1:Web.Internal.HttpApiData.ToHttpApiData,
+                  http-api-data-0.4.1.1:Web.Internal.HttpApiData.FromHttpApiData,
+                  PersistField,
+                  persistent-2.9.2:Database.Persist.Sql.Class.PersistFieldSql,
+                  ToJSON,
+                  FromJSON)
+      data EntityField Talk typ
+        = typ ~ Key Talk => TalkId |
+          typ ~ Maybe Text => TalkTitle |
+          typ ~ Maybe Text => TalkAbstract |
+          typ ~ Text => TalkLink |
+          typ ~ Maybe Text => TalkSpeakerName |
+          typ ~ Maybe (Key Speaker) => TalkSpeakerId |
+          typ ~ Maybe (Key Workshop) => TalkWorkshopId
+      keyToValues
+        = ((: []) GHC.Base.. (toPersistValue GHC.Base.. unTalkKey))
+      keyFromValues
+        = (fmap TalkKey
+             GHC.Base..
+               (fromPersistValue GHC.Base.. Database.Persist.TH.headNote))
+      entityDef _
+        = (((((((((EntityDef (HaskellName (packPTH "Talk")))
+                    (DBName (packPTH "talk")))
+                   (((((((FieldDef (HaskellName (packPTH "Id")))
+                           (DBName (packPTH "id")))
+                          ((FTTypeCon Nothing) (packPTH "TalkId")))
+                         SqlInt64)
+                        [])
+                       True)
+                      ((ForeignRef (HaskellName (packPTH "Talk")))
+                         ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))))
+                  [])
+                 [((((((FieldDef (HaskellName (packPTH "title")))
+                         (DBName (packPTH "title")))
+                        ((FTTypeCon Nothing) (packPTH "Text")))
+                       SqlString)
+                      [packPTH "Maybe"])
+                     True)
+                    NoReference,
+                  ((((((FieldDef (HaskellName (packPTH "abstract")))
+                         (DBName (packPTH "abstract")))
+                        ((FTTypeCon Nothing) (packPTH "Text")))
+                       SqlString)
+                      [packPTH "Maybe"])
+                     True)
+                    NoReference,
+                  ((((((FieldDef (HaskellName (packPTH "link")))
+                         (DBName (packPTH "link")))
+                        ((FTTypeCon Nothing) (packPTH "Text")))
+                       SqlString)
+                      [])
+                     True)
+                    NoReference,
+                  ((((((FieldDef (HaskellName (packPTH "speakerName")))
+                         (DBName (packPTH "speaker_name")))
+                        ((FTTypeCon Nothing) (packPTH "Text")))
+                       SqlString)
+                      [packPTH "Maybe"])
+                     True)
+                    NoReference,
+                  ((((((FieldDef (HaskellName (packPTH "speakerId")))
+                         (DBName (packPTH "speaker_id")))
+                        ((FTTypeCon Nothing) (packPTH "SpeakerId")))
+                       (persistent-2.9.2:Database.Persist.Sql.Class.sqlType
+                          (Data.Proxy.Proxy :: Data.Proxy.Proxy Int64)))
+                      [packPTH "Maybe"])
+                     True)
+                    ((ForeignRef (HaskellName (packPTH "Speaker")))
+                       ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64"))),
+                  ((((((FieldDef (HaskellName (packPTH "workshopId")))
+                         (DBName (packPTH "workshop_id")))
+                        ((FTTypeCon Nothing) (packPTH "WorkshopId")))
+                       (persistent-2.9.2:Database.Persist.Sql.Class.sqlType
+                          (Data.Proxy.Proxy :: Data.Proxy.Proxy Int64)))
+                      [packPTH "Maybe"])
+                     True)
+                    ((ForeignRef (HaskellName (packPTH "Workshop")))
+                       ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))])
+                [(((UniqueDef (HaskellName (packPTH "UniqueLink")))
+                     (DBName (packPTH "unique_link")))
+                    [(HaskellName (packPTH "link"), DBName (packPTH "link"))])
+                   []])
+               [])
+              [packPTH "Show"])
+             (Data.Map.Internal.fromList []))
+            False
+      toPersistFields (Talk x_aaxD x_aaxE x_aaxF x_aaxG x_aaxH x_aaxI)
+        = [SomePersistField x_aaxD, SomePersistField x_aaxE,
+           SomePersistField x_aaxF, SomePersistField x_aaxG,
+           SomePersistField x_aaxH, SomePersistField x_aaxI]
+      fromPersistValues
+        [x1_aaxK, x2_aaxL, x3_aaxM, x4_aaxN, x5_aaxO, x6_aaxP]
+        = Talk
+            <$>
+              (Database.Persist.TH.mapLeft
+                 ((Database.Persist.TH.fieldError
+                     ((((((((((EntityDef (HaskellName (packPTH "Talk")))
+                                (DBName (packPTH "talk")))
+                               (((((((FieldDef (HaskellName (packPTH "Id")))
+                                       (DBName (packPTH "id")))
+                                      ((FTTypeCon Nothing) (packPTH "TalkId")))
+                                     SqlInt64)
+                                    [])
+                                   True)
+                                  ((ForeignRef (HaskellName (packPTH "Talk")))
+                                     ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))))
+                              [])
+                             [((((((FieldDef (HaskellName (packPTH "title")))
+                                     (DBName (packPTH "title")))
+                                    ((FTTypeCon Nothing) (packPTH "Text")))
+                                   SqlString)
+                                  [packPTH "Maybe"])
+                                 True)
+                                NoReference,
+                              ((((((FieldDef (HaskellName (packPTH "abstract")))
+                                     (DBName (packPTH "abstract")))
+                                    ((FTTypeCon Nothing) (packPTH "Text")))
+                                   SqlString)
+                                  [packPTH "Maybe"])
+                                 True)
+                                NoReference,
+                              ((((((FieldDef (HaskellName (packPTH "link")))
+                                     (DBName (packPTH "link")))
+                                    ((FTTypeCon Nothing) (packPTH "Text")))
+                                   SqlString)
+                                  [])
+                                 True)
+                                NoReference,
+                              ((((((FieldDef (HaskellName (packPTH "speakerName")))
+                                     (DBName (packPTH "speaker_name")))
+                                    ((FTTypeCon Nothing) (packPTH "Text")))
+                                   SqlString)
+                                  [packPTH "Maybe"])
+                                 True)
+                                NoReference,
+                              ((((((FieldDef (HaskellName (packPTH "speakerId")))
+                                     (DBName (packPTH "speaker_id")))
+                                    ((FTTypeCon Nothing) (packPTH "SpeakerId")))
+                                   SqlInt64)
+                                  [packPTH "Maybe"])
+                                 True)
+                                ((ForeignRef (HaskellName (packPTH "Speaker")))
+                                   ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64"))),
+                              ((((((FieldDef (HaskellName (packPTH "workshopId")))
+                                     (DBName (packPTH "workshop_id")))
+                                    ((FTTypeCon Nothing) (packPTH "WorkshopId")))
+                                   SqlInt64)
+                                  [packPTH "Maybe"])
+                                 True)
+                                ((ForeignRef (HaskellName (packPTH "Workshop")))
+                                   ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))])
+                            [(((UniqueDef (HaskellName (packPTH "UniqueLink")))
+                                 (DBName (packPTH "unique_link")))
+                                [(HaskellName (packPTH "link"), DBName (packPTH "link"))])
+                               []])
+                           [])
+                          [packPTH "Show"])
+                         (Data.Map.Internal.fromList []))
+                        False))
+                    (((((((FieldDef (HaskellName (packPTH "title")))
+                            (DBName (packPTH "title")))
+                           ((FTTypeCon Nothing) (packPTH "Text")))
+                          SqlString)
+                         [packPTH "Maybe"])
+                        True)
+                       NoReference))
+                 GHC.Base.. fromPersistValue)
+                x1_aaxK
+            <*>
+              (Database.Persist.TH.mapLeft
+                 ((Database.Persist.TH.fieldError
+                     ((((((((((EntityDef (HaskellName (packPTH "Talk")))
+                                (DBName (packPTH "talk")))
+                               (((((((FieldDef (HaskellName (packPTH "Id")))
+                                       (DBName (packPTH "id")))
+                                      ((FTTypeCon Nothing) (packPTH "TalkId")))
+                                     SqlInt64)
+                                    [])
+                                   True)
+                                  ((ForeignRef (HaskellName (packPTH "Talk")))
+                                     ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))))
+                              [])
+                             [((((((FieldDef (HaskellName (packPTH "title")))
+                                     (DBName (packPTH "title")))
+                                    ((FTTypeCon Nothing) (packPTH "Text")))
+                                   SqlString)
+                                  [packPTH "Maybe"])
+                                 True)
+                                NoReference,
+                              ((((((FieldDef (HaskellName (packPTH "abstract")))
+                                     (DBName (packPTH "abstract")))
+                                    ((FTTypeCon Nothing) (packPTH "Text")))
+                                   SqlString)
+                                  [packPTH "Maybe"])
+                                 True)
+                                NoReference,
+                              ((((((FieldDef (HaskellName (packPTH "link")))
+                                     (DBName (packPTH "link")))
+                                    ((FTTypeCon Nothing) (packPTH "Text")))
+                                   SqlString)
+                                  [])
+                                 True)
+                                NoReference,
+                              ((((((FieldDef (HaskellName (packPTH "speakerName")))
+                                     (DBName (packPTH "speaker_name")))
+                                    ((FTTypeCon Nothing) (packPTH "Text")))
+                                   SqlString)
+                                  [packPTH "Maybe"])
+                                 True)
+                                NoReference,
+                              ((((((FieldDef (HaskellName (packPTH "speakerId")))
+                                     (DBName (packPTH "speaker_id")))
+                                    ((FTTypeCon Nothing) (packPTH "SpeakerId")))
+                                   SqlInt64)
+                                  [packPTH "Maybe"])
+                                 True)
+                                ((ForeignRef (HaskellName (packPTH "Speaker")))
+                                   ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64"))),
+                              ((((((FieldDef (HaskellName (packPTH "workshopId")))
+                                     (DBName (packPTH "workshop_id")))
+                                    ((FTTypeCon Nothing) (packPTH "WorkshopId")))
+                                   SqlInt64)
+                                  [packPTH "Maybe"])
+                                 True)
+                                ((ForeignRef (HaskellName (packPTH "Workshop")))
+                                   ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))])
+                            [(((UniqueDef (HaskellName (packPTH "UniqueLink")))
+                                 (DBName (packPTH "unique_link")))
+                                [(HaskellName (packPTH "link"), DBName (packPTH "link"))])
+                               []])
+                           [])
+                          [packPTH "Show"])
+                         (Data.Map.Internal.fromList []))
+                        False))
+                    (((((((FieldDef (HaskellName (packPTH "abstract")))
+                            (DBName (packPTH "abstract")))
+                           ((FTTypeCon Nothing) (packPTH "Text")))
+                          SqlString)
+                         [packPTH "Maybe"])
+                        True)
+                       NoReference))
+                 GHC.Base.. fromPersistValue)
+                x2_aaxL
+            <*>
+              (Database.Persist.TH.mapLeft
+                 ((Database.Persist.TH.fieldError
+                     ((((((((((EntityDef (HaskellName (packPTH "Talk")))
+                                (DBName (packPTH "talk")))
+                               (((((((FieldDef (HaskellName (packPTH "Id")))
+                                       (DBName (packPTH "id")))
+                                      ((FTTypeCon Nothing) (packPTH "TalkId")))
+                                     SqlInt64)
+                                    [])
+                                   True)
+                                  ((ForeignRef (HaskellName (packPTH "Talk")))
+                                     ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))))
+                              [])
+                             [((((((FieldDef (HaskellName (packPTH "title")))
+                                     (DBName (packPTH "title")))
+                                    ((FTTypeCon Nothing) (packPTH "Text")))
+                                   SqlString)
+                                  [packPTH "Maybe"])
+                                 True)
+                                NoReference,
+                              ((((((FieldDef (HaskellName (packPTH "abstract")))
+                                     (DBName (packPTH "abstract")))
+                                    ((FTTypeCon Nothing) (packPTH "Text")))
+                                   SqlString)
+                                  [packPTH "Maybe"])
+                                 True)
+                                NoReference,
+                              ((((((FieldDef (HaskellName (packPTH "link")))
+                                     (DBName (packPTH "link")))
+                                    ((FTTypeCon Nothing) (packPTH "Text")))
+                                   SqlString)
+                                  [])
+                                 True)
+                                NoReference,
+                              ((((((FieldDef (HaskellName (packPTH "speakerName")))
+                                     (DBName (packPTH "speaker_name")))
+                                    ((FTTypeCon Nothing) (packPTH "Text")))
+                                   SqlString)
+                                  [packPTH "Maybe"])
+                                 True)
+                                NoReference,
+                              ((((((FieldDef (HaskellName (packPTH "speakerId")))
+                                     (DBName (packPTH "speaker_id")))
+                                    ((FTTypeCon Nothing) (packPTH "SpeakerId")))
+                                   SqlInt64)
+                                  [packPTH "Maybe"])
+                                 True)
+                                ((ForeignRef (HaskellName (packPTH "Speaker")))
+                                   ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64"))),
+                              ((((((FieldDef (HaskellName (packPTH "workshopId")))
+                                     (DBName (packPTH "workshop_id")))
+                                    ((FTTypeCon Nothing) (packPTH "WorkshopId")))
+                                   SqlInt64)
+                                  [packPTH "Maybe"])
+                                 True)
+                                ((ForeignRef (HaskellName (packPTH "Workshop")))
+                                   ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))])
+                            [(((UniqueDef (HaskellName (packPTH "UniqueLink")))
+                                 (DBName (packPTH "unique_link")))
+                                [(HaskellName (packPTH "link"), DBName (packPTH "link"))])
+                               []])
+                           [])
+                          [packPTH "Show"])
+                         (Data.Map.Internal.fromList []))
+                        False))
+                    (((((((FieldDef (HaskellName (packPTH "link")))
+                            (DBName (packPTH "link")))
+                           ((FTTypeCon Nothing) (packPTH "Text")))
+                          SqlString)
+                         [])
+                        True)
+                       NoReference))
+                 GHC.Base.. fromPersistValue)
+                x3_aaxM
+            <*>
+              (Database.Persist.TH.mapLeft
+                 ((Database.Persist.TH.fieldError
+                     ((((((((((EntityDef (HaskellName (packPTH "Talk")))
+                                (DBName (packPTH "talk")))
+                               (((((((FieldDef (HaskellName (packPTH "Id")))
+                                       (DBName (packPTH "id")))
+                                      ((FTTypeCon Nothing) (packPTH "TalkId")))
+                                     SqlInt64)
+                                    [])
+                                   True)
+                                  ((ForeignRef (HaskellName (packPTH "Talk")))
+                                     ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))))
+                              [])
+                             [((((((FieldDef (HaskellName (packPTH "title")))
+                                     (DBName (packPTH "title")))
+                                    ((FTTypeCon Nothing) (packPTH "Text")))
+                                   SqlString)
+                                  [packPTH "Maybe"])
+                                 True)
+                                NoReference,
+                              ((((((FieldDef (HaskellName (packPTH "abstract")))
+                                     (DBName (packPTH "abstract")))
+                                    ((FTTypeCon Nothing) (packPTH "Text")))
+                                   SqlString)
+                                  [packPTH "Maybe"])
+                                 True)
+                                NoReference,
+                              ((((((FieldDef (HaskellName (packPTH "link")))
+                                     (DBName (packPTH "link")))
+                                    ((FTTypeCon Nothing) (packPTH "Text")))
+                                   SqlString)
+                                  [])
+                                 True)
+                                NoReference,
+                              ((((((FieldDef (HaskellName (packPTH "speakerName")))
+                                     (DBName (packPTH "speaker_name")))
+                                    ((FTTypeCon Nothing) (packPTH "Text")))
+                                   SqlString)
+                                  [packPTH "Maybe"])
+                                 True)
+                                NoReference,
+                              ((((((FieldDef (HaskellName (packPTH "speakerId")))
+                                     (DBName (packPTH "speaker_id")))
+                                    ((FTTypeCon Nothing) (packPTH "SpeakerId")))
+                                   SqlInt64)
+                                  [packPTH "Maybe"])
+                                 True)
+                                ((ForeignRef (HaskellName (packPTH "Speaker")))
+                                   ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64"))),
+                              ((((((FieldDef (HaskellName (packPTH "workshopId")))
+                                     (DBName (packPTH "workshop_id")))
+                                    ((FTTypeCon Nothing) (packPTH "WorkshopId")))
+                                   SqlInt64)
+                                  [packPTH "Maybe"])
+                                 True)
+                                ((ForeignRef (HaskellName (packPTH "Workshop")))
+                                   ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))])
+                            [(((UniqueDef (HaskellName (packPTH "UniqueLink")))
+                                 (DBName (packPTH "unique_link")))
+                                [(HaskellName (packPTH "link"), DBName (packPTH "link"))])
+                               []])
+                           [])
+                          [packPTH "Show"])
+                         (Data.Map.Internal.fromList []))
+                        False))
+                    (((((((FieldDef (HaskellName (packPTH "speakerName")))
+                            (DBName (packPTH "speaker_name")))
+                           ((FTTypeCon Nothing) (packPTH "Text")))
+                          SqlString)
+                         [packPTH "Maybe"])
+                        True)
+                       NoReference))
+                 GHC.Base.. fromPersistValue)
+                x4_aaxN
+            <*>
+              (Database.Persist.TH.mapLeft
+                 ((Database.Persist.TH.fieldError
+                     ((((((((((EntityDef (HaskellName (packPTH "Talk")))
+                                (DBName (packPTH "talk")))
+                               (((((((FieldDef (HaskellName (packPTH "Id")))
+                                       (DBName (packPTH "id")))
+                                      ((FTTypeCon Nothing) (packPTH "TalkId")))
+                                     SqlInt64)
+                                    [])
+                                   True)
+                                  ((ForeignRef (HaskellName (packPTH "Talk")))
+                                     ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))))
+                              [])
+                             [((((((FieldDef (HaskellName (packPTH "title")))
+                                     (DBName (packPTH "title")))
+                                    ((FTTypeCon Nothing) (packPTH "Text")))
+                                   SqlString)
+                                  [packPTH "Maybe"])
+                                 True)
+                                NoReference,
+                              ((((((FieldDef (HaskellName (packPTH "abstract")))
+                                     (DBName (packPTH "abstract")))
+                                    ((FTTypeCon Nothing) (packPTH "Text")))
+                                   SqlString)
+                                  [packPTH "Maybe"])
+                                 True)
+                                NoReference,
+                              ((((((FieldDef (HaskellName (packPTH "link")))
+                                     (DBName (packPTH "link")))
+                                    ((FTTypeCon Nothing) (packPTH "Text")))
+                                   SqlString)
+                                  [])
+                                 True)
+                                NoReference,
+                              ((((((FieldDef (HaskellName (packPTH "speakerName")))
+                                     (DBName (packPTH "speaker_name")))
+                                    ((FTTypeCon Nothing) (packPTH "Text")))
+                                   SqlString)
+                                  [packPTH "Maybe"])
+                                 True)
+                                NoReference,
+                              ((((((FieldDef (HaskellName (packPTH "speakerId")))
+                                     (DBName (packPTH "speaker_id")))
+                                    ((FTTypeCon Nothing) (packPTH "SpeakerId")))
+                                   SqlInt64)
+                                  [packPTH "Maybe"])
+                                 True)
+                                ((ForeignRef (HaskellName (packPTH "Speaker")))
+                                   ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64"))),
+                              ((((((FieldDef (HaskellName (packPTH "workshopId")))
+                                     (DBName (packPTH "workshop_id")))
+                                    ((FTTypeCon Nothing) (packPTH "WorkshopId")))
+                                   SqlInt64)
+                                  [packPTH "Maybe"])
+                                 True)
+                                ((ForeignRef (HaskellName (packPTH "Workshop")))
+                                   ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))])
+                            [(((UniqueDef (HaskellName (packPTH "UniqueLink")))
+                                 (DBName (packPTH "unique_link")))
+                                [(HaskellName (packPTH "link"), DBName (packPTH "link"))])
+                               []])
+                           [])
+                          [packPTH "Show"])
+                         (Data.Map.Internal.fromList []))
+                        False))
+                    (((((((FieldDef (HaskellName (packPTH "speakerId")))
+                            (DBName (packPTH "speaker_id")))
+                           ((FTTypeCon Nothing) (packPTH "SpeakerId")))
+                          SqlInt64)
+                         [packPTH "Maybe"])
+                        True)
+                       ((ForeignRef (HaskellName (packPTH "Speaker")))
+                          ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))))
+                 GHC.Base.. fromPersistValue)
+                x5_aaxO
+            <*>
+              (Database.Persist.TH.mapLeft
+                 ((Database.Persist.TH.fieldError
+                     ((((((((((EntityDef (HaskellName (packPTH "Talk")))
+                                (DBName (packPTH "talk")))
+                               (((((((FieldDef (HaskellName (packPTH "Id")))
+                                       (DBName (packPTH "id")))
+                                      ((FTTypeCon Nothing) (packPTH "TalkId")))
+                                     SqlInt64)
+                                    [])
+                                   True)
+                                  ((ForeignRef (HaskellName (packPTH "Talk")))
+                                     ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))))
+                              [])
+                             [((((((FieldDef (HaskellName (packPTH "title")))
+                                     (DBName (packPTH "title")))
+                                    ((FTTypeCon Nothing) (packPTH "Text")))
+                                   SqlString)
+                                  [packPTH "Maybe"])
+                                 True)
+                                NoReference,
+                              ((((((FieldDef (HaskellName (packPTH "abstract")))
+                                     (DBName (packPTH "abstract")))
+                                    ((FTTypeCon Nothing) (packPTH "Text")))
+                                   SqlString)
+                                  [packPTH "Maybe"])
+                                 True)
+                                NoReference,
+                              ((((((FieldDef (HaskellName (packPTH "link")))
+                                     (DBName (packPTH "link")))
+                                    ((FTTypeCon Nothing) (packPTH "Text")))
+                                   SqlString)
+                                  [])
+                                 True)
+                                NoReference,
+                              ((((((FieldDef (HaskellName (packPTH "speakerName")))
+                                     (DBName (packPTH "speaker_name")))
+                                    ((FTTypeCon Nothing) (packPTH "Text")))
+                                   SqlString)
+                                  [packPTH "Maybe"])
+                                 True)
+                                NoReference,
+                              ((((((FieldDef (HaskellName (packPTH "speakerId")))
+                                     (DBName (packPTH "speaker_id")))
+                                    ((FTTypeCon Nothing) (packPTH "SpeakerId")))
+                                   SqlInt64)
+                                  [packPTH "Maybe"])
+                                 True)
+                                ((ForeignRef (HaskellName (packPTH "Speaker")))
+                                   ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64"))),
+                              ((((((FieldDef (HaskellName (packPTH "workshopId")))
+                                     (DBName (packPTH "workshop_id")))
+                                    ((FTTypeCon Nothing) (packPTH "WorkshopId")))
+                                   SqlInt64)
+                                  [packPTH "Maybe"])
+                                 True)
+                                ((ForeignRef (HaskellName (packPTH "Workshop")))
+                                   ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))])
+                            [(((UniqueDef (HaskellName (packPTH "UniqueLink")))
+                                 (DBName (packPTH "unique_link")))
+                                [(HaskellName (packPTH "link"), DBName (packPTH "link"))])
+                               []])
+                           [])
+                          [packPTH "Show"])
+                         (Data.Map.Internal.fromList []))
+                        False))
+                    (((((((FieldDef (HaskellName (packPTH "workshopId")))
+                            (DBName (packPTH "workshop_id")))
+                           ((FTTypeCon Nothing) (packPTH "WorkshopId")))
+                          SqlInt64)
+                         [packPTH "Maybe"])
+                        True)
+                       ((ForeignRef (HaskellName (packPTH "Workshop")))
+                          ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))))
+                 GHC.Base.. fromPersistValue)
+                x6_aaxP
+      fromPersistValues x_aaxJ
+        = (Left
+             $ (mappend (packPTH "Talk: fromPersistValues failed on: "))
+                 (Data.Text.pack $ show x_aaxJ))
+      persistUniqueToFieldNames UniqueLink {}
+        = [(HaskellName (packPTH "link"), DBName (packPTH "link"))]
+      persistUniqueToValues (UniqueLink x_aaxQ) = [toPersistValue x_aaxQ]
+      persistUniqueKeys
+        (Talk _title_aaxR
+              _abstract_aaxS
+              _link_aaxT
+              _speakerName_aaxU
+              _speakerId_aaxV
+              _workshopId_aaxW)
+        = [UniqueLink _link_aaxT]
+      persistFieldDef TalkId
+        = ((((((FieldDef (HaskellName (packPTH "Id")))
+                 (DBName (packPTH "id")))
+                ((FTTypeCon Nothing) (packPTH "TalkId")))
+               SqlInt64)
+              [])
+             True)
+            ((ForeignRef (HaskellName (packPTH "Talk")))
+               ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))
+      persistFieldDef TalkTitle
+        = ((((((FieldDef (HaskellName (packPTH "title")))
+                 (DBName (packPTH "title")))
+                ((FTTypeCon Nothing) (packPTH "Text")))
+               SqlString)
+              [packPTH "Maybe"])
+             True)
+            NoReference
+      persistFieldDef TalkAbstract
+        = ((((((FieldDef (HaskellName (packPTH "abstract")))
+                 (DBName (packPTH "abstract")))
+                ((FTTypeCon Nothing) (packPTH "Text")))
+               SqlString)
+              [packPTH "Maybe"])
+             True)
+            NoReference
+      persistFieldDef TalkLink
+        = ((((((FieldDef (HaskellName (packPTH "link")))
+                 (DBName (packPTH "link")))
+                ((FTTypeCon Nothing) (packPTH "Text")))
+               SqlString)
+              [])
+             True)
+            NoReference
+      persistFieldDef TalkSpeakerName
+        = ((((((FieldDef (HaskellName (packPTH "speakerName")))
+                 (DBName (packPTH "speaker_name")))
+                ((FTTypeCon Nothing) (packPTH "Text")))
+               SqlString)
+              [packPTH "Maybe"])
+             True)
+            NoReference
+      persistFieldDef TalkSpeakerId
+        = ((((((FieldDef (HaskellName (packPTH "speakerId")))
+                 (DBName (packPTH "speaker_id")))
+                ((FTTypeCon Nothing) (packPTH "SpeakerId")))
+               SqlInt64)
+              [packPTH "Maybe"])
+             True)
+            ((ForeignRef (HaskellName (packPTH "Speaker")))
+               ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))
+      persistFieldDef TalkWorkshopId
+        = ((((((FieldDef (HaskellName (packPTH "workshopId")))
+                 (DBName (packPTH "workshop_id")))
+                ((FTTypeCon Nothing) (packPTH "WorkshopId")))
+               SqlInt64)
+              [packPTH "Maybe"])
+             True)
+            ((ForeignRef (HaskellName (packPTH "Workshop")))
+               ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))
+      persistIdField = TalkId
+      fieldLens TalkId
+        = (lensPTH entityKey)
+            (\ (Entity _ value_aaxX) key_aaxY -> (Entity key_aaxY) value_aaxX)
+      fieldLens TalkTitle
+        = (lensPTH (talkTitle GHC.Base.. entityVal))
+            (\ (Entity key_aaxZ value_aay0) x_aay1
+               -> (Entity key_aaxZ) value_aay0 {talkTitle = x_aay1})
+      fieldLens TalkAbstract
+        = (lensPTH (talkAbstract GHC.Base.. entityVal))
+            (\ (Entity key_aaxZ value_aay0) x_aay1
+               -> (Entity key_aaxZ) value_aay0 {talkAbstract = x_aay1})
+      fieldLens TalkLink
+        = (lensPTH (talkLink GHC.Base.. entityVal))
+            (\ (Entity key_aaxZ value_aay0) x_aay1
+               -> (Entity key_aaxZ) value_aay0 {talkLink = x_aay1})
+      fieldLens TalkSpeakerName
+        = (lensPTH (talkSpeakerName GHC.Base.. entityVal))
+            (\ (Entity key_aaxZ value_aay0) x_aay1
+               -> (Entity key_aaxZ) value_aay0 {talkSpeakerName = x_aay1})
+      fieldLens TalkSpeakerId
+        = (lensPTH (talkSpeakerId GHC.Base.. entityVal))
+            (\ (Entity key_aaxZ value_aay0) x_aay1
+               -> (Entity key_aaxZ) value_aay0 {talkSpeakerId = x_aay1})
+      fieldLens TalkWorkshopId
+        = (lensPTH (talkWorkshopId GHC.Base.. entityVal))
+            (\ (Entity key_aaxZ value_aay0) x_aay1
+               -> (Entity key_aaxZ) value_aay0 {talkWorkshopId = x_aay1})
+    instance ToBackendKey SqlBackend Talk where
+      toBackendKey = unTalkKey
+      fromBackendKey = TalkKey
+    data Speaker
+      = Speaker {speakerFirstName :: !Text, speakerLastName :: !Text}
+      deriving Show
+    type SpeakerId = Key Speaker
+    instance PersistEntity Speaker where
+      type PersistEntityBackend Speaker = SqlBackend
+      data Unique Speaker
+        = SpeakerName Text Text
+        deriving Show
+      newtype Key Speaker
+        = SpeakerKey {unSpeakerKey :: (BackendKey SqlBackend)}
+        deriving (Show,
+                  Read,
+                  Eq,
+                  Ord,
+                  PathPiece,
+                  http-api-data-0.4.1.1:Web.Internal.HttpApiData.ToHttpApiData,
+                  http-api-data-0.4.1.1:Web.Internal.HttpApiData.FromHttpApiData,
+                  PersistField,
+                  persistent-2.9.2:Database.Persist.Sql.Class.PersistFieldSql,
+                  ToJSON,
+                  FromJSON)
+      data EntityField Speaker typ
+        = typ ~ Key Speaker => SpeakerId |
+          typ ~ Text => SpeakerFirstName |
+          typ ~ Text => SpeakerLastName
+      keyToValues
+        = ((: []) GHC.Base.. (toPersistValue GHC.Base.. unSpeakerKey))
+      keyFromValues
+        = (fmap SpeakerKey
+             GHC.Base..
+               (fromPersistValue GHC.Base.. Database.Persist.TH.headNote))
+      entityDef _
+        = (((((((((EntityDef (HaskellName (packPTH "Speaker")))
+                    (DBName (packPTH "speaker")))
+                   (((((((FieldDef (HaskellName (packPTH "Id")))
+                           (DBName (packPTH "id")))
+                          ((FTTypeCon Nothing) (packPTH "SpeakerId")))
+                         SqlInt64)
+                        [])
+                       True)
+                      ((ForeignRef (HaskellName (packPTH "Speaker")))
+                         ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))))
+                  [])
+                 [((((((FieldDef (HaskellName (packPTH "firstName")))
+                         (DBName (packPTH "first_name")))
+                        ((FTTypeCon Nothing) (packPTH "Text")))
+                       SqlString)
+                      [])
+                     True)
+                    NoReference,
+                  ((((((FieldDef (HaskellName (packPTH "lastName")))
+                         (DBName (packPTH "last_name")))
+                        ((FTTypeCon Nothing) (packPTH "Text")))
+                       SqlString)
+                      [])
+                     True)
+                    NoReference])
+                [(((UniqueDef (HaskellName (packPTH "SpeakerName")))
+                     (DBName (packPTH "speaker_name")))
+                    [(HaskellName (packPTH "firstName"), 
+                      DBName (packPTH "first_name")),
+                     (HaskellName (packPTH "lastName"), DBName (packPTH "last_name"))])
+                   []])
+               [])
+              [packPTH "Show"])
+             (Data.Map.Internal.fromList []))
+            False
+      toPersistFields (Speaker x_aay2 x_aay3)
+        = [SomePersistField x_aay2, SomePersistField x_aay3]
+      fromPersistValues [x1_aay5, x2_aay6]
+        = Speaker
+            <$>
+              (Database.Persist.TH.mapLeft
+                 ((Database.Persist.TH.fieldError
+                     ((((((((((EntityDef (HaskellName (packPTH "Speaker")))
+                                (DBName (packPTH "speaker")))
+                               (((((((FieldDef (HaskellName (packPTH "Id")))
+                                       (DBName (packPTH "id")))
+                                      ((FTTypeCon Nothing) (packPTH "SpeakerId")))
+                                     SqlInt64)
+                                    [])
+                                   True)
+                                  ((ForeignRef (HaskellName (packPTH "Speaker")))
+                                     ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))))
+                              [])
+                             [((((((FieldDef (HaskellName (packPTH "firstName")))
+                                     (DBName (packPTH "first_name")))
+                                    ((FTTypeCon Nothing) (packPTH "Text")))
+                                   SqlString)
+                                  [])
+                                 True)
+                                NoReference,
+                              ((((((FieldDef (HaskellName (packPTH "lastName")))
+                                     (DBName (packPTH "last_name")))
+                                    ((FTTypeCon Nothing) (packPTH "Text")))
+                                   SqlString)
+                                  [])
+                                 True)
+                                NoReference])
+                            [(((UniqueDef (HaskellName (packPTH "SpeakerName")))
+                                 (DBName (packPTH "speaker_name")))
+                                [(HaskellName (packPTH "firstName"), 
+                                  DBName (packPTH "first_name")),
+                                 (HaskellName (packPTH "lastName"), DBName (packPTH "last_name"))])
+                               []])
+                           [])
+                          [packPTH "Show"])
+                         (Data.Map.Internal.fromList []))
+                        False))
+                    (((((((FieldDef (HaskellName (packPTH "firstName")))
+                            (DBName (packPTH "first_name")))
+                           ((FTTypeCon Nothing) (packPTH "Text")))
+                          SqlString)
+                         [])
+                        True)
+                       NoReference))
+                 GHC.Base.. fromPersistValue)
+                x1_aay5
+            <*>
+              (Database.Persist.TH.mapLeft
+                 ((Database.Persist.TH.fieldError
+                     ((((((((((EntityDef (HaskellName (packPTH "Speaker")))
+                                (DBName (packPTH "speaker")))
+                               (((((((FieldDef (HaskellName (packPTH "Id")))
+                                       (DBName (packPTH "id")))
+                                      ((FTTypeCon Nothing) (packPTH "SpeakerId")))
+                                     SqlInt64)
+                                    [])
+                                   True)
+                                  ((ForeignRef (HaskellName (packPTH "Speaker")))
+                                     ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))))
+                              [])
+                             [((((((FieldDef (HaskellName (packPTH "firstName")))
+                                     (DBName (packPTH "first_name")))
+                                    ((FTTypeCon Nothing) (packPTH "Text")))
+                                   SqlString)
+                                  [])
+                                 True)
+                                NoReference,
+                              ((((((FieldDef (HaskellName (packPTH "lastName")))
+                                     (DBName (packPTH "last_name")))
+                                    ((FTTypeCon Nothing) (packPTH "Text")))
+                                   SqlString)
+                                  [])
+                                 True)
+                                NoReference])
+                            [(((UniqueDef (HaskellName (packPTH "SpeakerName")))
+                                 (DBName (packPTH "speaker_name")))
+                                [(HaskellName (packPTH "firstName"), 
+                                  DBName (packPTH "first_name")),
+                                 (HaskellName (packPTH "lastName"), DBName (packPTH "last_name"))])
+                               []])
+                           [])
+                          [packPTH "Show"])
+                         (Data.Map.Internal.fromList []))
+                        False))
+                    (((((((FieldDef (HaskellName (packPTH "lastName")))
+                            (DBName (packPTH "last_name")))
+                           ((FTTypeCon Nothing) (packPTH "Text")))
+                          SqlString)
+                         [])
+                        True)
+                       NoReference))
+                 GHC.Base.. fromPersistValue)
+                x2_aay6
+      fromPersistValues x_aay4
+        = (Left
+             $ (mappend (packPTH "Speaker: fromPersistValues failed on: "))
+                 (Data.Text.pack $ show x_aay4))
+      persistUniqueToFieldNames SpeakerName {}
+        = [(HaskellName (packPTH "firstName"), 
+            DBName (packPTH "first_name")),
+           (HaskellName (packPTH "lastName"), DBName (packPTH "last_name"))]
+      persistUniqueToValues (SpeakerName x_aay7 x_aay8)
+        = [toPersistValue x_aay7, toPersistValue x_aay8]
+      persistUniqueKeys (Speaker _firstName_aay9 _lastName_aaya)
+        = [(SpeakerName _firstName_aay9) _lastName_aaya]
+      persistFieldDef SpeakerId
+        = ((((((FieldDef (HaskellName (packPTH "Id")))
+                 (DBName (packPTH "id")))
+                ((FTTypeCon Nothing) (packPTH "SpeakerId")))
+               SqlInt64)
+              [])
+             True)
+            ((ForeignRef (HaskellName (packPTH "Speaker")))
+               ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))
+      persistFieldDef SpeakerFirstName
+        = ((((((FieldDef (HaskellName (packPTH "firstName")))
+                 (DBName (packPTH "first_name")))
+                ((FTTypeCon Nothing) (packPTH "Text")))
+               SqlString)
+              [])
+             True)
+            NoReference
+      persistFieldDef SpeakerLastName
+        = ((((((FieldDef (HaskellName (packPTH "lastName")))
+                 (DBName (packPTH "last_name")))
+                ((FTTypeCon Nothing) (packPTH "Text")))
+               SqlString)
+              [])
+             True)
+            NoReference
+      persistIdField = SpeakerId
+      fieldLens SpeakerId
+        = (lensPTH entityKey)
+            (\ (Entity _ value_aayb) key_aayc -> (Entity key_aayc) value_aayb)
+      fieldLens SpeakerFirstName
+        = (lensPTH (speakerFirstName GHC.Base.. entityVal))
+            (\ (Entity key_aayd value_aaye) x_aayf
+               -> (Entity key_aayd) value_aaye {speakerFirstName = x_aayf})
+      fieldLens SpeakerLastName
+        = (lensPTH (speakerLastName GHC.Base.. entityVal))
+            (\ (Entity key_aayd value_aaye) x_aayf
+               -> (Entity key_aayd) value_aaye {speakerLastName = x_aayf})
+    instance ToBackendKey SqlBackend Speaker where
+      toBackendKey = unSpeakerKey
+      fromBackendKey = SpeakerKey
+    data Workshop
+      = Workshop {workshopTitle :: !Text}
+      deriving Show
+    type WorkshopId = Key Workshop
+    instance PersistEntity Workshop where
+      type PersistEntityBackend Workshop = SqlBackend
+      data Unique Workshop
+        = UniqueTitle Text
+        deriving Show
+      newtype Key Workshop
+        = WorkshopKey {unWorkshopKey :: (BackendKey SqlBackend)}
+        deriving (Show,
+                  Read,
+                  Eq,
+                  Ord,
+                  PathPiece,
+                  http-api-data-0.4.1.1:Web.Internal.HttpApiData.ToHttpApiData,
+                  http-api-data-0.4.1.1:Web.Internal.HttpApiData.FromHttpApiData,
+                  PersistField,
+                  persistent-2.9.2:Database.Persist.Sql.Class.PersistFieldSql,
+                  ToJSON,
+                  FromJSON)
+      data EntityField Workshop typ
+        = typ ~ Key Workshop => WorkshopId | typ ~ Text => WorkshopTitle
+      keyToValues
+        = ((: []) GHC.Base.. (toPersistValue GHC.Base.. unWorkshopKey))
+      keyFromValues
+        = (fmap WorkshopKey
+             GHC.Base..
+               (fromPersistValue GHC.Base.. Database.Persist.TH.headNote))
+      entityDef _
+        = (((((((((EntityDef (HaskellName (packPTH "Workshop")))
+                    (DBName (packPTH "workshop")))
+                   (((((((FieldDef (HaskellName (packPTH "Id")))
+                           (DBName (packPTH "id")))
+                          ((FTTypeCon Nothing) (packPTH "WorkshopId")))
+                         SqlInt64)
+                        [])
+                       True)
+                      ((ForeignRef (HaskellName (packPTH "Workshop")))
+                         ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))))
+                  [])
+                 [((((((FieldDef (HaskellName (packPTH "title")))
+                         (DBName (packPTH "title")))
+                        ((FTTypeCon Nothing) (packPTH "Text")))
+                       SqlString)
+                      [])
+                     True)
+                    NoReference])
+                [(((UniqueDef (HaskellName (packPTH "UniqueTitle")))
+                     (DBName (packPTH "unique_title")))
+                    [(HaskellName (packPTH "title"), DBName (packPTH "title"))])
+                   []])
+               [])
+              [packPTH "Show"])
+             (Data.Map.Internal.fromList []))
+            False
+      toPersistFields (Workshop x_aayg) = [SomePersistField x_aayg]
+      fromPersistValues [x1_aayi]
+        = Workshop
+            <$>
+              (Database.Persist.TH.mapLeft
+                 ((Database.Persist.TH.fieldError
+                     ((((((((((EntityDef (HaskellName (packPTH "Workshop")))
+                                (DBName (packPTH "workshop")))
+                               (((((((FieldDef (HaskellName (packPTH "Id")))
+                                       (DBName (packPTH "id")))
+                                      ((FTTypeCon Nothing) (packPTH "WorkshopId")))
+                                     SqlInt64)
+                                    [])
+                                   True)
+                                  ((ForeignRef (HaskellName (packPTH "Workshop")))
+                                     ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))))
+                              [])
+                             [((((((FieldDef (HaskellName (packPTH "title")))
+                                     (DBName (packPTH "title")))
+                                    ((FTTypeCon Nothing) (packPTH "Text")))
+                                   SqlString)
+                                  [])
+                                 True)
+                                NoReference])
+                            [(((UniqueDef (HaskellName (packPTH "UniqueTitle")))
+                                 (DBName (packPTH "unique_title")))
+                                [(HaskellName (packPTH "title"), DBName (packPTH "title"))])
+                               []])
+                           [])
+                          [packPTH "Show"])
+                         (Data.Map.Internal.fromList []))
+                        False))
+                    (((((((FieldDef (HaskellName (packPTH "title")))
+                            (DBName (packPTH "title")))
+                           ((FTTypeCon Nothing) (packPTH "Text")))
+                          SqlString)
+                         [])
+                        True)
+                       NoReference))
+                 GHC.Base.. fromPersistValue)
+                x1_aayi
+      fromPersistValues x_aayh
+        = (Left
+             $ (mappend (packPTH "Workshop: fromPersistValues failed on: "))
+                 (Data.Text.pack $ show x_aayh))
+      persistUniqueToFieldNames UniqueTitle {}
+        = [(HaskellName (packPTH "title"), DBName (packPTH "title"))]
+      persistUniqueToValues (UniqueTitle x_aayj)
+        = [toPersistValue x_aayj]
+      persistUniqueKeys (Workshop _title_aayk)
+        = [UniqueTitle _title_aayk]
+      persistFieldDef WorkshopId
+        = ((((((FieldDef (HaskellName (packPTH "Id")))
+                 (DBName (packPTH "id")))
+                ((FTTypeCon Nothing) (packPTH "WorkshopId")))
+               SqlInt64)
+              [])
+             True)
+            ((ForeignRef (HaskellName (packPTH "Workshop")))
+               ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))
+      persistFieldDef WorkshopTitle
+        = ((((((FieldDef (HaskellName (packPTH "title")))
+                 (DBName (packPTH "title")))
+                ((FTTypeCon Nothing) (packPTH "Text")))
+               SqlString)
+              [])
+             True)
+            NoReference
+      persistIdField = WorkshopId
+      fieldLens WorkshopId
+        = (lensPTH entityKey)
+            (\ (Entity _ value_aayl) key_aaym -> (Entity key_aaym) value_aayl)
+      fieldLens WorkshopTitle
+        = (lensPTH (workshopTitle GHC.Base.. entityVal))
+            (\ (Entity key_aayn value_aayo) x_aayp
+               -> (Entity key_aayn) value_aayo {workshopTitle = x_aayp})
+    instance ToBackendKey SqlBackend Workshop where
+      toBackendKey = unWorkshopKey
+      fromBackendKey = WorkshopKey
+    migrateAll :: persistent-2.9.2:Database.Persist.Sql.Types.Migration
+    migrateAll
+      = do let defs_aayq
+                 = [(((((((((EntityDef (HaskellName (packPTH "Talk")))
+                              (DBName (packPTH "talk")))
+                             (((((((FieldDef (HaskellName (packPTH "Id")))
+                                     (DBName (packPTH "id")))
+                                    ((FTTypeCon Nothing) (packPTH "TalkId")))
+                                   SqlInt64)
+                                  [])
+                                 True)
+                                ((ForeignRef (HaskellName (packPTH "Talk")))
+                                   ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))))
+                            [])
+                           [((((((FieldDef (HaskellName (packPTH "title")))
+                                   (DBName (packPTH "title")))
+                                  ((FTTypeCon Nothing) (packPTH "Text")))
+                                 SqlString)
+                                [packPTH "Maybe"])
+                               True)
+                              NoReference,
+                            ((((((FieldDef (HaskellName (packPTH "abstract")))
+                                   (DBName (packPTH "abstract")))
+                                  ((FTTypeCon Nothing) (packPTH "Text")))
+                                 SqlString)
+                                [packPTH "Maybe"])
+                               True)
+                              NoReference,
+                            ((((((FieldDef (HaskellName (packPTH "link")))
+                                   (DBName (packPTH "link")))
+                                  ((FTTypeCon Nothing) (packPTH "Text")))
+                                 SqlString)
+                                [])
+                               True)
+                              NoReference,
+                            ((((((FieldDef (HaskellName (packPTH "speakerName")))
+                                   (DBName (packPTH "speaker_name")))
+                                  ((FTTypeCon Nothing) (packPTH "Text")))
+                                 SqlString)
+                                [packPTH "Maybe"])
+                               True)
+                              NoReference,
+                            ((((((FieldDef (HaskellName (packPTH "speakerId")))
+                                   (DBName (packPTH "speaker_id")))
+                                  ((FTTypeCon Nothing) (packPTH "SpeakerId")))
+                                 (persistent-2.9.2:Database.Persist.Sql.Class.sqlType
+                                    (Data.Proxy.Proxy :: Data.Proxy.Proxy Int64)))
+                                [packPTH "Maybe"])
+                               True)
+                              ((ForeignRef (HaskellName (packPTH "Speaker")))
+                                 ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64"))),
+                            ((((((FieldDef (HaskellName (packPTH "workshopId")))
+                                   (DBName (packPTH "workshop_id")))
+                                  ((FTTypeCon Nothing) (packPTH "WorkshopId")))
+                                 (persistent-2.9.2:Database.Persist.Sql.Class.sqlType
+                                    (Data.Proxy.Proxy :: Data.Proxy.Proxy Int64)))
+                                [packPTH "Maybe"])
+                               True)
+                              ((ForeignRef (HaskellName (packPTH "Workshop")))
+                                 ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))])
+                          [(((UniqueDef (HaskellName (packPTH "UniqueLink")))
+                               (DBName (packPTH "unique_link")))
+                              [(HaskellName (packPTH "link"), DBName (packPTH "link"))])
+                             []])
+                         [])
+                        [packPTH "Show"])
+                       (Data.Map.Internal.fromList []))
+                      False,
+                    (((((((((EntityDef (HaskellName (packPTH "Speaker")))
+                              (DBName (packPTH "speaker")))
+                             (((((((FieldDef (HaskellName (packPTH "Id")))
+                                     (DBName (packPTH "id")))
+                                    ((FTTypeCon Nothing) (packPTH "SpeakerId")))
+                                   SqlInt64)
+                                  [])
+                                 True)
+                                ((ForeignRef (HaskellName (packPTH "Speaker")))
+                                   ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))))
+                            [])
+                           [((((((FieldDef (HaskellName (packPTH "firstName")))
+                                   (DBName (packPTH "first_name")))
+                                  ((FTTypeCon Nothing) (packPTH "Text")))
+                                 SqlString)
+                                [])
+                               True)
+                              NoReference,
+                            ((((((FieldDef (HaskellName (packPTH "lastName")))
+                                   (DBName (packPTH "last_name")))
+                                  ((FTTypeCon Nothing) (packPTH "Text")))
+                                 SqlString)
+                                [])
+                               True)
+                              NoReference])
+                          [(((UniqueDef (HaskellName (packPTH "SpeakerName")))
+                               (DBName (packPTH "speaker_name")))
+                              [(HaskellName (packPTH "firstName"), 
+                                DBName (packPTH "first_name")),
+                               (HaskellName (packPTH "lastName"), DBName (packPTH "last_name"))])
+                             []])
+                         [])
+                        [packPTH "Show"])
+                       (Data.Map.Internal.fromList []))
+                      False,
+                    (((((((((EntityDef (HaskellName (packPTH "Workshop")))
+                              (DBName (packPTH "workshop")))
+                             (((((((FieldDef (HaskellName (packPTH "Id")))
+                                     (DBName (packPTH "id")))
+                                    ((FTTypeCon Nothing) (packPTH "WorkshopId")))
+                                   SqlInt64)
+                                  [])
+                                 True)
+                                ((ForeignRef (HaskellName (packPTH "Workshop")))
+                                   ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))))
+                            [])
+                           [((((((FieldDef (HaskellName (packPTH "title")))
+                                   (DBName (packPTH "title")))
+                                  ((FTTypeCon Nothing) (packPTH "Text")))
+                                 SqlString)
+                                [])
+                               True)
+                              NoReference])
+                          [(((UniqueDef (HaskellName (packPTH "UniqueTitle")))
+                               (DBName (packPTH "unique_title")))
+                              [(HaskellName (packPTH "title"), DBName (packPTH "title"))])
+                             []])
+                         [])
+                        [packPTH "Show"])
+                       (Data.Map.Internal.fromList []))
+                      False]
+           (persistent-2.9.2:Database.Persist.Sql.Migration.migrate defs_aayq)
+             ((((((((((EntityDef (HaskellName (packPTH "Talk")))
+                        (DBName (packPTH "talk")))
+                       (((((((FieldDef (HaskellName (packPTH "Id")))
+                               (DBName (packPTH "id")))
+                              ((FTTypeCon Nothing) (packPTH "TalkId")))
+                             SqlInt64)
+                            [])
+                           True)
+                          ((ForeignRef (HaskellName (packPTH "Talk")))
+                             ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))))
+                      [])
+                     [((((((FieldDef (HaskellName (packPTH "title")))
+                             (DBName (packPTH "title")))
+                            ((FTTypeCon Nothing) (packPTH "Text")))
+                           SqlString)
+                          [packPTH "Maybe"])
+                         True)
+                        NoReference,
+                      ((((((FieldDef (HaskellName (packPTH "abstract")))
+                             (DBName (packPTH "abstract")))
+                            ((FTTypeCon Nothing) (packPTH "Text")))
+                           SqlString)
+                          [packPTH "Maybe"])
+                         True)
+                        NoReference,
+                      ((((((FieldDef (HaskellName (packPTH "link")))
+                             (DBName (packPTH "link")))
+                            ((FTTypeCon Nothing) (packPTH "Text")))
+                           SqlString)
+                          [])
+                         True)
+                        NoReference,
+                      ((((((FieldDef (HaskellName (packPTH "speakerName")))
+                             (DBName (packPTH "speaker_name")))
+                            ((FTTypeCon Nothing) (packPTH "Text")))
+                           SqlString)
+                          [packPTH "Maybe"])
+                         True)
+                        NoReference,
+                      ((((((FieldDef (HaskellName (packPTH "speakerId")))
+                             (DBName (packPTH "speaker_id")))
+                            ((FTTypeCon Nothing) (packPTH "SpeakerId")))
+                           (persistent-2.9.2:Database.Persist.Sql.Class.sqlType
+                              (Data.Proxy.Proxy :: Data.Proxy.Proxy Int64)))
+                          [packPTH "Maybe"])
+                         True)
+                        ((ForeignRef (HaskellName (packPTH "Speaker")))
+                           ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64"))),
+                      ((((((FieldDef (HaskellName (packPTH "workshopId")))
+                             (DBName (packPTH "workshop_id")))
+                            ((FTTypeCon Nothing) (packPTH "WorkshopId")))
+                           (persistent-2.9.2:Database.Persist.Sql.Class.sqlType
+                              (Data.Proxy.Proxy :: Data.Proxy.Proxy Int64)))
+                          [packPTH "Maybe"])
+                         True)
+                        ((ForeignRef (HaskellName (packPTH "Workshop")))
+                           ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))])
+                    [(((UniqueDef (HaskellName (packPTH "UniqueLink")))
+                         (DBName (packPTH "unique_link")))
+                        [(HaskellName (packPTH "link"), DBName (packPTH "link"))])
+                       []])
+                   [])
+                  [packPTH "Show"])
+                 (Data.Map.Internal.fromList []))
+                False)
+           (persistent-2.9.2:Database.Persist.Sql.Migration.migrate defs_aayq)
+             ((((((((((EntityDef (HaskellName (packPTH "Speaker")))
+                        (DBName (packPTH "speaker")))
+                       (((((((FieldDef (HaskellName (packPTH "Id")))
+                               (DBName (packPTH "id")))
+                              ((FTTypeCon Nothing) (packPTH "SpeakerId")))
+                             SqlInt64)
+                            [])
+                           True)
+                          ((ForeignRef (HaskellName (packPTH "Speaker")))
+                             ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))))
+                      [])
+                     [((((((FieldDef (HaskellName (packPTH "firstName")))
+                             (DBName (packPTH "first_name")))
+                            ((FTTypeCon Nothing) (packPTH "Text")))
+                           SqlString)
+                          [])
+                         True)
+                        NoReference,
+                      ((((((FieldDef (HaskellName (packPTH "lastName")))
+                             (DBName (packPTH "last_name")))
+                            ((FTTypeCon Nothing) (packPTH "Text")))
+                           SqlString)
+                          [])
+                         True)
+                        NoReference])
+                    [(((UniqueDef (HaskellName (packPTH "SpeakerName")))
+                         (DBName (packPTH "speaker_name")))
+                        [(HaskellName (packPTH "firstName"), 
+                          DBName (packPTH "first_name")),
+                         (HaskellName (packPTH "lastName"), DBName (packPTH "last_name"))])
+                       []])
+                   [])
+                  [packPTH "Show"])
+                 (Data.Map.Internal.fromList []))
+                False)
+           (persistent-2.9.2:Database.Persist.Sql.Migration.migrate defs_aayq)
+             ((((((((((EntityDef (HaskellName (packPTH "Workshop")))
+                        (DBName (packPTH "workshop")))
+                       (((((((FieldDef (HaskellName (packPTH "Id")))
+                               (DBName (packPTH "id")))
+                              ((FTTypeCon Nothing) (packPTH "WorkshopId")))
+                             SqlInt64)
+                            [])
+                           True)
+                          ((ForeignRef (HaskellName (packPTH "Workshop")))
+                             ((FTTypeCon (Just (packPTH "Data.Int"))) (packPTH "Int64")))))
+                      [])
+                     [((((((FieldDef (HaskellName (packPTH "title")))
+                             (DBName (packPTH "title")))
+                            ((FTTypeCon Nothing) (packPTH "Text")))
+                           SqlString)
+                          [])
+                         True)
+                        NoReference])
+                    [(((UniqueDef (HaskellName (packPTH "UniqueTitle")))
+                         (DBName (packPTH "unique_title")))
+                        [(HaskellName (packPTH "title"), DBName (packPTH "title"))])
+                       []])
+                   [])
+                  [packPTH "Show"])
+                 (Data.Map.Internal.fromList []))
+                False)
+[2 of 9] Compiling Paths_videoarxiv
+[3 of 9] Compiling Settings
+/home/val/compsci/haskell/videoarxiv/src/Settings.hs:115:25-51: Splicing expression
+    embedFile configSettingsYml
+  ======>
+    GHC.IO.Unsafe.unsafePerformIO
+      ((Data.ByteString.Unsafe.unsafePackAddressLen 1582)
+         "# Values formatted like \"_env:YESOD_ENV_VAR_NAME:default_value\" can be overridden by the specified environment variable.\n\
+         \# See https://github.com/yesodweb/yesod/wiki/Configuration#overriding-configuration-values-with-environment-variables\n\
+         \\n\
+         \static-dir:     \"_env:YESOD_STATIC_DIR:static\"\n\
+         \host:           \"_env:YESOD_HOST:*4\" # any IPv4 host\n\
+         \port:           \"_env:YESOD_PORT:3000\" # NB: The port `yesod devel` uses is distinct from this value. Set the `yesod devel` port from the command line.\n\
+         \ip-from-header: \"_env:YESOD_IP_FROM_HEADER:false\"\n\
+         \\n\
+         \# Default behavior: determine the application root from the request headers.\n\
+         \# Uncomment to set an explicit approot\n\
+         \#approot:        \"_env:YESOD_APPROOT:http://localhost:3000\"\n\
+         \\n\
+         \# By default, `yesod devel` runs in development, and built executables use\n\
+         \# production settings (see below). To override this, use the following:\n\
+         \#\n\
+         \# development: false\n\
+         \\n\
+         \# Optional values with the following production defaults.\n\
+         \# In development, they default to the inverse.\n\
+         \#\n\
+         \# detailed-logging: false\n\
+         \# should-log-all: false\n\
+         \# reload-templates: false\n\
+         \# mutable-static: false\n\
+         \# skip-combining: false\n\
+         \auth-dummy-login : false\n\
+         \\n\
+         \# NB: If you need a numeric value (e.g. 123) to parse as a String, wrap it in single quotes (e.g. \"_env:YESOD_PGPASS:'123'\")\n\
+         \# See https://github.com/yesodweb/yesod/wiki/Configuration#parsing-numeric-values-as-strings\n\
+         \\n\
+         \database:\n\
+         \  # See config/test-settings.yml for an override during tests\n\
+         \  database: \"_env:YESOD_SQLITE_DATABASE:videoarxiv.sqlite3\"\n\
+         \  poolsize: \"_env:YESOD_SQLITE_POOLSIZE:10\"\n\
+         \\n\
+         \copyright: \"\"\n\
+         \#analytics: UA-YOURCODE\n"#)
+[4 of 9] Compiling Settings.StaticFiles
+/home/val/compsci/haskell/videoarxiv/src/Settings/StaticFiles.hs:21:1-49: Splicing declarations
+    staticFiles (appStaticDir compileTimeAppSettings)
+  ======>
+    css_css_css :: Yesod.Static.StaticRoute
+    css_css_css
+      = (Yesod.Static.StaticRoute
+           ((GHC.Base.map Data.Text.pack) ["css", "css.css"]))
+          [(Data.Text.pack "etag", Data.Text.pack "aQUAGn89")]
+[5 of 9] Compiling Import.NoFoundation
+[6 of 9] Compiling Foundation
+/home/val/compsci/haskell/videoarxiv/src/Foundation.hs:50:21-63: Splicing expression
+    parseRoutesFile "config/routes.yesodroutes"
+  ======>
+    [Yesod.Routes.TH.Types.ResourceLeaf
+       (((((Yesod.Routes.TH.Types.Resource "StaticR")
+             [Yesod.Routes.TH.Types.Static "static"])
+            ((Yesod.Routes.TH.Types.Subsite "Static") "appStatic"))
+           [])
+          True),
+     Yesod.Routes.TH.Types.ResourceLeaf
+       (((((Yesod.Routes.TH.Types.Resource "FaviconR")
+             [Yesod.Routes.TH.Types.Static "favicon.ico"])
+            ((Yesod.Routes.TH.Types.Methods Nothing) ["GET"]))
+           [])
+          True),
+     Yesod.Routes.TH.Types.ResourceLeaf
+       (((((Yesod.Routes.TH.Types.Resource "RobotsR")
+             [Yesod.Routes.TH.Types.Static "robots.txt"])
+            ((Yesod.Routes.TH.Types.Methods Nothing) ["GET"]))
+           [])
+          True),
+     Yesod.Routes.TH.Types.ResourceLeaf
+       (((((Yesod.Routes.TH.Types.Resource "HomeR") [])
+            ((Yesod.Routes.TH.Types.Methods Nothing) ["GET"]))
+           [])
+          True),
+     Yesod.Routes.TH.Types.ResourceLeaf
+       (((((Yesod.Routes.TH.Types.Resource "TalkR")
+             [Yesod.Routes.TH.Types.Static "talk",
+              Yesod.Routes.TH.Types.Dynamic "Int"])
+            ((Yesod.Routes.TH.Types.Methods Nothing) ["GET"]))
+           [])
+          True),
+     Yesod.Routes.TH.Types.ResourceLeaf
+       (((((Yesod.Routes.TH.Types.Resource "SpeakerR")
+             [Yesod.Routes.TH.Types.Static "speaker",
+              Yesod.Routes.TH.Types.Dynamic "Int"])
+            ((Yesod.Routes.TH.Types.Methods Nothing) ["GET"]))
+           [])
+          True),
+     Yesod.Routes.TH.Types.ResourceLeaf
+       (((((Yesod.Routes.TH.Types.Resource "WorkshopR")
+             [Yesod.Routes.TH.Types.Static "workshop",
+              Yesod.Routes.TH.Types.Dynamic "Int"])
+            ((Yesod.Routes.TH.Types.Methods Nothing) ["GET"]))
+           [])
+          True),
+     Yesod.Routes.TH.Types.ResourceLeaf
+       (((((Yesod.Routes.TH.Types.Resource "SpeakersR")
+             [Yesod.Routes.TH.Types.Static "speakers"])
+            ((Yesod.Routes.TH.Types.Methods Nothing) ["GET"]))
+           [])
+          True),
+     Yesod.Routes.TH.Types.ResourceLeaf
+       (((((Yesod.Routes.TH.Types.Resource "WorkshopsR")
+             [Yesod.Routes.TH.Types.Static "workshops"])
+            ((Yesod.Routes.TH.Types.Methods Nothing) ["GET"]))
+           [])
+          True)]
+/home/val/compsci/haskell/videoarxiv/src/Foundation.hs:50:1-64: Splicing declarations
+    mkYesodData
+      "App"
+      ([Yesod.Routes.TH.Types.ResourceLeaf
+          (((((Yesod.Routes.TH.Types.Resource "StaticR")
+                [Yesod.Routes.TH.Types.Static "static"])
+               ((Yesod.Routes.TH.Types.Subsite "Static") "appStatic"))
+              [])
+             True),
+        Yesod.Routes.TH.Types.ResourceLeaf
+          (((((Yesod.Routes.TH.Types.Resource "FaviconR")
+                [Yesod.Routes.TH.Types.Static "favicon.ico"])
+               ((Yesod.Routes.TH.Types.Methods Nothing) ["GET"]))
+              [])
+             True),
+        Yesod.Routes.TH.Types.ResourceLeaf
+          (((((Yesod.Routes.TH.Types.Resource "RobotsR")
+                [Yesod.Routes.TH.Types.Static "robots.txt"])
+               ((Yesod.Routes.TH.Types.Methods Nothing) ["GET"]))
+              [])
+             True),
+        Yesod.Routes.TH.Types.ResourceLeaf
+          (((((Yesod.Routes.TH.Types.Resource "HomeR") [])
+               ((Yesod.Routes.TH.Types.Methods Nothing) ["GET"]))
+              [])
+             True),
+        Yesod.Routes.TH.Types.ResourceLeaf
+          (((((Yesod.Routes.TH.Types.Resource "TalkR")
+                [Yesod.Routes.TH.Types.Static "talk",
+                 Yesod.Routes.TH.Types.Dynamic "Int"])
+               ((Yesod.Routes.TH.Types.Methods Nothing) ["GET"]))
+              [])
+             True),
+        Yesod.Routes.TH.Types.ResourceLeaf
+          (((((Yesod.Routes.TH.Types.Resource "SpeakerR")
+                [Yesod.Routes.TH.Types.Static "speaker",
+                 Yesod.Routes.TH.Types.Dynamic "Int"])
+               ((Yesod.Routes.TH.Types.Methods Nothing) ["GET"]))
+              [])
+             True),
+        Yesod.Routes.TH.Types.ResourceLeaf
+          (((((Yesod.Routes.TH.Types.Resource "WorkshopR")
+                [Yesod.Routes.TH.Types.Static "workshop",
+                 Yesod.Routes.TH.Types.Dynamic "Int"])
+               ((Yesod.Routes.TH.Types.Methods Nothing) ["GET"]))
+              [])
+             True),
+        Yesod.Routes.TH.Types.ResourceLeaf
+          (((((Yesod.Routes.TH.Types.Resource "SpeakersR")
+                [Yesod.Routes.TH.Types.Static "speakers"])
+               ((Yesod.Routes.TH.Types.Methods Nothing) ["GET"]))
+              [])
+             True),
+        Yesod.Routes.TH.Types.ResourceLeaf
+          (((((Yesod.Routes.TH.Types.Resource "WorkshopsR")
+                [Yesod.Routes.TH.Types.Static "workshops"])
+               ((Yesod.Routes.TH.Types.Methods Nothing) ["GET"]))
+              [])
+             True)])
+  ======>
+    instance ParseRoute App where
+      parseRoute
+        = ((\ f_a1dhH x_a1dhI -> (f_a1dhH ()) x_a1dhI) ::
+             (() -> ([Text], [(Text, Text)]) -> Maybe (Route a_a1dhJ))
+             -> ([Text], [(Text, Text)]) -> Maybe (Route a_a1dhJ))
+            helper_a1dhG
+        where
+            helper_a1dhG env4105_a1dhh req4105_a1dhi
+              = helper4105_a1dhj (fst req4105_a1dhi)
+              where
+                  helper4105_a1dhj ((:) "static" restPath_a1dhl)
+                    = (((((\ _runHandler_a1dho _getSub_a1dhp toMaster_a1dhq _env_a1dhr
+                             -> (fmap toMaster_a1dhq GHC.Base.. parseRoute))
+                            (\ _ _ x_a1dhs _ -> x_a1dhs))
+                           (\ sub_a1dht -> appStatic sub_a1dht))
+                          (\ sroute_a1dhu -> StaticR sroute_a1dhu))
+                         env4105_a1dhh)
+                        (((\ p_a1dhm (_, q_a1dhn) -> (p_a1dhm, q_a1dhn)) restPath_a1dhl)
+                           req4105_a1dhi)
+                  helper4105_a1dhj ((:) "favicon.ico" [])
+                    = ((((\ _ _ x_a1dhv _ -> x_a1dhv) (error "mdsGetHandler"))
+                          env4105_a1dhh)
+                         (Just FaviconR))
+                        req4105_a1dhi
+                  helper4105_a1dhj ((:) "robots.txt" [])
+                    = ((((\ _ _ x_a1dhw _ -> x_a1dhw) (error "mdsGetHandler"))
+                          env4105_a1dhh)
+                         (Just RobotsR))
+                        req4105_a1dhi
+                  helper4105_a1dhj []
+                    = ((((\ _ _ x_a1dhx _ -> x_a1dhx) (error "mdsGetHandler"))
+                          env4105_a1dhh)
+                         (Just HomeR))
+                        req4105_a1dhi
+                  helper4105_a1dhj
+                    ((:) "talk" ((:) (fromPathPiece -> Just dyn_a1dhy) []))
+                    = ((((\ _ _ x_a1dhz _ -> x_a1dhz)
+                           ((error "mdsGetHandler") dyn_a1dhy))
+                          env4105_a1dhh)
+                         (Just (TalkR dyn_a1dhy)))
+                        req4105_a1dhi
+                  helper4105_a1dhj
+                    ((:) "speaker" ((:) (fromPathPiece -> Just dyn_a1dhA) []))
+                    = ((((\ _ _ x_a1dhB _ -> x_a1dhB)
+                           ((error "mdsGetHandler") dyn_a1dhA))
+                          env4105_a1dhh)
+                         (Just (SpeakerR dyn_a1dhA)))
+                        req4105_a1dhi
+                  helper4105_a1dhj
+                    ((:) "workshop" ((:) (fromPathPiece -> Just dyn_a1dhC) []))
+                    = ((((\ _ _ x_a1dhD _ -> x_a1dhD)
+                           ((error "mdsGetHandler") dyn_a1dhC))
+                          env4105_a1dhh)
+                         (Just (WorkshopR dyn_a1dhC)))
+                        req4105_a1dhi
+                  helper4105_a1dhj ((:) "speakers" [])
+                    = ((((\ _ _ x_a1dhE _ -> x_a1dhE) (error "mdsGetHandler"))
+                          env4105_a1dhh)
+                         (Just SpeakersR))
+                        req4105_a1dhi
+                  helper4105_a1dhj ((:) "workshops" [])
+                    = ((((\ _ _ x_a1dhF _ -> x_a1dhF) (error "mdsGetHandler"))
+                          env4105_a1dhh)
+                         (Just WorkshopsR))
+                        req4105_a1dhi
+                  helper4105_a1dhj _
+                    = ((((\ _ _ x_a1dhk _ -> x_a1dhk) (error "mds404")) env4105_a1dhh)
+                         Nothing)
+                        req4105_a1dhi
+    instance RenderRoute App where
+      data Route App
+        = StaticR (Route Static) |
+          FaviconR |
+          RobotsR |
+          HomeR |
+          TalkR Int |
+          SpeakerR Int |
+          WorkshopR Int |
+          SpeakersR |
+          WorkshopsR
+        deriving (Show, Eq, Read)
+      renderRoute (StaticR sub_a1dgW)
+        = (\ (a_a1dgX, b_a1dgY)
+             -> ((Data.Text.pack "static" : a_a1dgX), b_a1dgY))
+            (renderRoute sub_a1dgW)
+      renderRoute FaviconR = ((Data.Text.pack "favicon.ico" : []), [])
+      renderRoute RobotsR = ((Data.Text.pack "robots.txt" : []), [])
+      renderRoute HomeR = ([], [])
+      renderRoute (TalkR dyn_a1dgZ)
+        = ((Data.Text.pack "talk" : (toPathPiece dyn_a1dgZ : [])), [])
+      renderRoute (SpeakerR dyn_a1dh0)
+        = ((Data.Text.pack "speaker" : (toPathPiece dyn_a1dh0 : [])), [])
+      renderRoute (WorkshopR dyn_a1dh1)
+        = ((Data.Text.pack "workshop" : (toPathPiece dyn_a1dh1 : [])), [])
+      renderRoute SpeakersR = ((Data.Text.pack "speakers" : []), [])
+      renderRoute WorkshopsR = ((Data.Text.pack "workshops" : []), [])
+    instance RouteAttrs App where
+      routeAttrs StaticR {} = Data.Set.Internal.fromList []
+      routeAttrs FaviconR {} = Data.Set.Internal.fromList []
+      routeAttrs RobotsR {} = Data.Set.Internal.fromList []
+      routeAttrs HomeR {} = Data.Set.Internal.fromList []
+      routeAttrs TalkR {} = Data.Set.Internal.fromList []
+      routeAttrs SpeakerR {} = Data.Set.Internal.fromList []
+      routeAttrs WorkshopR {} = Data.Set.Internal.fromList []
+      routeAttrs SpeakersR {} = Data.Set.Internal.fromList []
+      routeAttrs WorkshopsR {} = Data.Set.Internal.fromList []
+    resourcesApp :: [Yesod.Routes.TH.Types.ResourceTree String]
+    resourcesApp
+      = [Yesod.Routes.TH.Types.ResourceLeaf
+           (((((Yesod.Routes.TH.Types.Resource "StaticR")
+                 [Yesod.Routes.TH.Types.Static "static"])
+                ((Yesod.Routes.TH.Types.Subsite "Static") "appStatic"))
+               [])
+              True),
+         Yesod.Routes.TH.Types.ResourceLeaf
+           (((((Yesod.Routes.TH.Types.Resource "FaviconR")
+                 [Yesod.Routes.TH.Types.Static "favicon.ico"])
+                ((Yesod.Routes.TH.Types.Methods Nothing) ["GET"]))
+               [])
+              True),
+         Yesod.Routes.TH.Types.ResourceLeaf
+           (((((Yesod.Routes.TH.Types.Resource "RobotsR")
+                 [Yesod.Routes.TH.Types.Static "robots.txt"])
+                ((Yesod.Routes.TH.Types.Methods Nothing) ["GET"]))
+               [])
+              True),
+         Yesod.Routes.TH.Types.ResourceLeaf
+           (((((Yesod.Routes.TH.Types.Resource "HomeR") [])
+                ((Yesod.Routes.TH.Types.Methods Nothing) ["GET"]))
+               [])
+              True),
+         Yesod.Routes.TH.Types.ResourceLeaf
+           (((((Yesod.Routes.TH.Types.Resource "TalkR")
+                 [Yesod.Routes.TH.Types.Static "talk",
+                  Yesod.Routes.TH.Types.Dynamic "Int"])
+                ((Yesod.Routes.TH.Types.Methods Nothing) ["GET"]))
+               [])
+              True),
+         Yesod.Routes.TH.Types.ResourceLeaf
+           (((((Yesod.Routes.TH.Types.Resource "SpeakerR")
+                 [Yesod.Routes.TH.Types.Static "speaker",
+                  Yesod.Routes.TH.Types.Dynamic "Int"])
+                ((Yesod.Routes.TH.Types.Methods Nothing) ["GET"]))
+               [])
+              True),
+         Yesod.Routes.TH.Types.ResourceLeaf
+           (((((Yesod.Routes.TH.Types.Resource "WorkshopR")
+                 [Yesod.Routes.TH.Types.Static "workshop",
+                  Yesod.Routes.TH.Types.Dynamic "Int"])
+                ((Yesod.Routes.TH.Types.Methods Nothing) ["GET"]))
+               [])
+              True),
+         Yesod.Routes.TH.Types.ResourceLeaf
+           (((((Yesod.Routes.TH.Types.Resource "SpeakersR")
+                 [Yesod.Routes.TH.Types.Static "speakers"])
+                ((Yesod.Routes.TH.Types.Methods Nothing) ["GET"]))
+               [])
+              True),
+         Yesod.Routes.TH.Types.ResourceLeaf
+           (((((Yesod.Routes.TH.Types.Resource "WorkshopsR")
+                 [Yesod.Routes.TH.Types.Static "workshops"])
+                ((Yesod.Routes.TH.Types.Methods Nothing) ["GET"]))
+               [])
+              True)]
+    type Handler = HandlerFor App
+    type Widget = WidgetFor App ()
+/home/val/compsci/haskell/videoarxiv/src/Foundation.hs:95:11-37: Splicing expression
+    widgetFile "default-layout"
+  ======>
+    do do (asWidgetT GHC.Base.. toWidget)
+            ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                GHC.Base.. Data.Text.pack)
+               "
+<div id="header"><div id="logo">VideoArxiv</div>
+<br>
+<div class="menulink"><a href="")
+          (getUrlRenderParams
+             >>=
+               (\ urender_a1e4M
+                  -> (asWidgetT GHC.Base.. toWidget)
+                       (toHtml ((\ u_a1e4N -> (urender_a1e4M u_a1e4N) []) HomeR))))
+          (asWidgetT GHC.Base.. toWidget)
+            ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                GHC.Base.. Data.Text.pack)
+               "">Home</a>
+</div>
+<div class="menulink"><a href="")
+          (getUrlRenderParams
+             >>=
+               (\ urender_a1e4O
+                  -> (asWidgetT GHC.Base.. toWidget)
+                       (toHtml ((\ u_a1e4P -> (urender_a1e4O u_a1e4P) []) WorkshopsR))))
+          (asWidgetT GHC.Base.. toWidget)
+            ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                GHC.Base.. Data.Text.pack)
+               ""> Workshops</a>
+</div>
+<div class="menulink"><a href="")
+          (getUrlRenderParams
+             >>=
+               (\ urender_a1e4Q
+                  -> (asWidgetT GHC.Base.. toWidget)
+                       (toHtml ((\ u_a1e4R -> (urender_a1e4Q u_a1e4R) []) SpeakersR))))
+          (asWidgetT GHC.Base.. toWidget)
+            ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                GHC.Base.. Data.Text.pack)
+               ""> Speakers</a>
+</div>
+<div id="search"><form id="searchForm" action="")
+          (getUrlRenderParams
+             >>=
+               (\ urender_a1e4S
+                  -> (asWidgetT GHC.Base.. toWidget)
+                       (toHtml ((\ u_a1e4T -> (urender_a1e4S u_a1e4T) []) HomeR))))
+          (asWidgetT GHC.Base.. toWidget)
+            ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                GHC.Base.. Data.Text.pack)
+               "" method="get"><input type="text" name="query" size="50">
+<input type="submit" value="Search">
+</form>
+</div>
+<hr>
+</div>
+
+<div id="main_body">")
+          (asWidgetT GHC.Base.. toWidget) widget
+          (asWidgetT GHC.Base.. toWidget)
+            ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                GHC.Base.. Data.Text.pack)
+               "</div>
+
+<footer><hr>
+")
+          (asWidgetT GHC.Base.. toWidget)
+            (toHtml (appCopyright (appSettings master)))
+          (asWidgetT GHC.Base.. toWidget)
+            ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                GHC.Base.. Data.Text.pack)
+               "</footer>
+")
+       toWidget
+         (\ _render_a1e4U
+            -> (Text.Internal.Css.CssNoWhitespace
+                  GHC.Base.. (Data.Foldable.foldr ($)) [])
+                 [])
+/home/val/compsci/haskell/videoarxiv/src/Foundation.hs:96:23-74: Splicing expression
+    hamletFile "templates/default-layout-wrapper.hamlet"
+  ======>
+    \ _render_a1e53
+      -> do GHC.Base.id
+              ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                  GHC.Base.. Data.Text.pack)
+                 "<!doctype html><!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]--><!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]--><!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]--><!--[if gt IE 8]><!--><html class="no-js" lang="en"> <!--<![endif]--><head><meta charset="UTF-8"><title>VideoArxiv</title><meta name="description" content="Repository for links to math videos"><meta name="author" content="mathematics, math, talk, video, lecture, conference, workshop"><meta name="viewport" content="width=device-width,initial-scale=1">")
+            (Text.Hamlet.asHtmlUrl (pageHead pc)) _render_a1e53
+            GHC.Base.id
+              ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                  GHC.Base.. Data.Text.pack)
+                 "</head><body>")
+            (Text.Hamlet.asHtmlUrl (pageBody pc)) _render_a1e53
+            GHC.Base.id
+              ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                  GHC.Base.. Data.Text.pack)
+                 "</body></html>")
+
+/home/val/compsci/haskell/videoarxiv/src/Foundation.hs:13:1: warning: [-Wunused-imports]
+    The import of ‘Control.Monad.Logger’ is redundant
+      except perhaps to import instances from ‘Control.Monad.Logger’
+    To import instances alone, use: import Control.Monad.Logger()
+   |
+13 | import Control.Monad.Logger (LogSource)
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/home/val/compsci/haskell/videoarxiv/src/Foundation.hs:17:1: warning: [-Wunused-imports]
+    The import of ‘Text.Jasmine’ is redundant
+      except perhaps to import instances from ‘Text.Jasmine’
+    To import instances alone, use: import Text.Jasmine()
+   |
+17 | import Text.Jasmine (minifym)
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/home/val/compsci/haskell/videoarxiv/src/Foundation.hs:19:1: warning: [-Wunused-imports]
+    The qualified import of ‘Data.CaseInsensitive’ is redundant
+      except perhaps to import instances from ‘Data.CaseInsensitive’
+    To import instances alone, use: import Data.CaseInsensitive()
+   |
+19 | import qualified Data.CaseInsensitive as CI
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/home/val/compsci/haskell/videoarxiv/src/Foundation.hs:20:1: warning: [-Wunused-imports]
+    The qualified import of ‘Data.Text.Encoding’ is redundant
+      except perhaps to import instances from ‘Data.Text.Encoding’
+    To import instances alone, use: import Data.Text.Encoding()
+   |
+20 | import qualified Data.Text.Encoding as TE
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/home/val/compsci/haskell/videoarxiv/src/Foundation.hs:23:1: warning: [-Wunused-imports]
+    The import of ‘Yesod.Default.Util’ is redundant
+      except perhaps to import instances from ‘Yesod.Default.Util’
+    To import instances alone, use: import Yesod.Default.Util()
+   |
+23 | import Yesod.Default.Util (addStaticContentExternal)
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/home/val/compsci/haskell/videoarxiv/src/Foundation.hs:90:5: warning: [-Wunused-matches]
+    Defined but not used: ‘mmsg’
+   |
+90 |     mmsg <- getMessage
+   |     ^^^^
+
+/home/val/compsci/haskell/videoarxiv/src/Foundation.hs:91:5: warning: [-Wunused-matches]
+    Defined but not used: ‘mcurrentRoute’
+   |
+91 |     mcurrentRoute <- getCurrentRoute
+   |     ^^^^^^^^^^^^^
+[7 of 9] Compiling Import
+[8 of 9] Compiling Handlers
+/home/val/compsci/haskell/videoarxiv/src/Handlers.hs:28:47-76: Splicing expression
+    embedFile "config/favicon.ico"
+  ======>
+    GHC.IO.Unsafe.unsafePerformIO
+      ((Data.ByteString.Unsafe.unsafePackAddressLen 1342)
+         "\NUL\NUL\SOH\NUL\STX\NUL\DLE\DLE\NUL\NUL\SOH\NUL \NULh\EOT\NUL\NUL&\NUL\NUL\NUL\DLE\DLE\STX\NUL\SOH\NUL\SOH\NUL\\176\NUL\NUL\NUL\\142\EOT\NUL\NUL(\NUL\NUL\NUL\DLE\NUL\NUL\NUL \NUL\NUL\NUL\SOH\NUL \NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\\166^,\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\SOHA)\ESC#iJ6\\136\\131cN\\217\\144oY\\250\\147s]\\255\\141mW\\245\\131aL\\198kI3dQ3\US\SI\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL5\GS\r\n\
+         \Y:&a~[D\\241\\143lU\\255\\141jT\\255\\140iS\\255\\140iR\\255\\140iR\\255\\140iR\\255\\139gP\\255zU=\\211^:!3A\ESC\SOH\STX\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL0\CAN\a\STXR1\ESCXyP6\\255\\135^C\\246~V<\\246xO5\\230yQ7\\211xP6\\213xP6\\213xP5\\213wP5\\213yQ7\\219mE)\\199U,\DLE\CAN\NUL\NUL\NUL\NUL\NUL\NUL\ENQ\NUL2\NAK\ETX\tT/\SYN?\DELS5\\225\\211\\159~\\188\\158pQ\\204]2\NAK\\132\NUL\NUL\NUL\ENQ\DC1\NUL\NUL\SO\DC3\NUL\NUL\SI\DC4\NUL\NUL\SI\DC3\NUL\NUL\SI\DLE\NUL\NUL\SO(\EOT\NUL\DC1M$\t\EMM$\t\t\DLE\a\SOH\aJ \EOTm;\NAK\NUL\vY/\DC3z\\144`@\\223\\204\\155y\\193{N/\\218P$\ACK\\180Q'\n\
+         \\\141R'\n\
+         \\\141R'\n\
+         \\\141Q&\t\\141Q%\t\\141Q%\t\\139Q%\a\\178Q#\EOTg.\DC2\NUL.U$\STX\\255M\RS\NUL`\CAN\NUL\NUL\SI_0\DLE\\184\\177\\128^\\206\\178\\129_\\207a1\DC2\\194C\ETB\NULTF\RS\STX7G\RS\SOH<G\RS\SOH<G\GS\SOH;D\ESC\SOH2L\US\STX\\169T!\SOH\\224B\SUB\NULiU!\NUL\\255S!\NUL\\225H\FS\NUL#A\ETB\NUL>qA!\\219\\204\\154x\\192\\148bB\\208Q\"\STX\\174G\ESC\NULoI\GS\NULjI\GS\NULjI\GS\NUL{N\US\NUL\\147I\GS\NUL\\165T!\NUL\\255F\FS\NUL\\132U\"\NUL\\255U\"\NUL\\236M\US\NUL42\r\NUL2i:\SUB\\212\\202\\151t\\194\\201\\151v\\193sB\"\\233K\FS\NUL\\145E\SUB\NULDE\SUB\NULAB\EM\NULYQ \NUL\\233U\"\NUL\\255U\"\NUL\\255I\US\ETX}Z'\ACK\\255T!\NUL\\131\NUL\NUL\NUL\fW,\SI\\161\\160mL\\216\\186\\138i\\196\\176\\128_\\201\\175~]\\205f8\EM\\182S'\b\\138X*\r\\133U)\r\\131V(\t\\224\\*\t\\254\\*\n\
+         \\\255C\US\ACKP`0\DC1\\205<\DC3\NUL\SIM(\DLEc\\135W7\\226\\207\\157|\\189\\131W9\\225{L-\\235\\201\\151v\\191\\147dD\\221f9\SUB\\255f7\EM\\255f8\SUB\\255g9\ESC\\255h:\FS\\255g9\SUB\\2524\CAN\ENQ\DC1Y-\DLE5&\DLE\NUL$xL/\\213\\201\\150t\\194\\169|^\\205qG,\\251qG+\\255\\159pQ\\216\\203\\153w\\187\\133Z<\\230sH-\\254tJ.\\255tK/\\255uL0\\255mB%\\194\NUL\NUL\NUL\NULL+\DC4EtN5\\212~V:\\249\\143fK\\230\\130[A\\243~W=\\255~X?\\255\\131\\A\\247\\143fJ\\232\\129Y?\\242~X?\\254\\129[A\\255\\129[C\\254\\128ZA\\255j@$H$\b\NUL\NULP1\GS\ESCxT<\\213\\141jR\\255\\137fO\\254\\139gP\\255\\140iR\\255\\140iS\\254\\140iR\\255\\139hR\\254\\139iR\\254\\141kT\\254\\142kU\\254\\143mW\\255|V=\\156c:\RS\ACK\NUL\NUL\NUL\NUL\ACK\STX\NUL\NULgG20\\133dN\\218\\154{g\\255\\153zf\\255\\153ye\\254\\153zf\\254\\153zf\\255\\154zf\\255\\154{g\\254\\154|i\\255\\154{g\\255\\135dM\\170tO8\DC4\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NULkL8\US\\133eP\\158\\157\\128m\\255\\167\\140{\\255\\166\\139z\\255\\166\\140z\\255\\167\\140{\\255\\168\\141|\\255\\155~j\\243\\135eOr|W?\SO\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL&\DLE\SOH\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\\202\\169\\151\NUL6\GS\t\ETXhH4#\\135hTn\\151zh\\159\\153~k\\171\\151zg\\149\\134dNZpL6\DC3_B1\SOH\\179^3\NUL\NUL\NUL\NUL\NUL\\178\\129_\NUL\\248\US\NUL\NUL\\240\a\NUL\NUL\\224\ETX\NUL\NUL\\225\\255\NUL\NUL\\240\SOH\NUL\NUL\\176\\252\NUL\NUL\\152x\NUL\NUL\CAN8\NUL\NUL\\144\NUL\NUL\NUL\\176\NUL\NUL\NUL\\224\NUL\NUL\NUL\\192\SOH\NUL\NUL\\192\SOH\NUL\NUL\\224\ETX\NUL\NUL\\240\SI\NUL\NUL\\254?\NUL\NUL(\NUL\NUL\NUL\DLE\NUL\NUL\NUL \NUL\NUL\NUL\SOH\NUL\SOH\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\\255\\255\\255\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL\NUL"#)
+/home/val/compsci/haskell/videoarxiv/src/Handlers.hs:32:49-77: Splicing expression
+    embedFile "config/robots.txt"
+  ======>
+    GHC.IO.Unsafe.unsafePerformIO
+      ((Data.ByteString.Unsafe.unsafePackAddressLen 14)
+         "User-agent: *\n"#)
+/home/val/compsci/haskell/videoarxiv/src/Handlers.hs:49:24-40: Splicing expression
+    widgetFile "home"
+  ======>
+    do do ((Text.Hamlet.maybeH searchQueryMaybe)
+             (\ searchqr_a1wEZ
+                -> do (asWidgetT GHC.Base.. toWidget)
+                        ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                            GHC.Base.. Data.Text.pack)
+                           "<h2>Search results for "")
+                      (asWidgetT GHC.Base.. toWidget) (toHtml searchqr_a1wEZ)
+                      (asWidgetT GHC.Base.. toWidget)
+                        ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                            GHC.Base.. Data.Text.pack)
+                           ""</h2>
+")))
+            (Just
+               ((asWidgetT GHC.Base.. toWidget)
+                  ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                      GHC.Base.. Data.Text.pack)
+                     "<h2></h2>
+")))
+          (asWidgetT GHC.Base.. toWidget) ((ellipsed 5) pages)
+          (asWidgetT GHC.Base.. toWidget)
+            ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                GHC.Base.. Data.Text.pack)
+               "
+<ol start="")
+          (asWidgetT GHC.Base.. toWidget) (toHtml (show enumStart))
+          (asWidgetT GHC.Base.. toWidget)
+            ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                GHC.Base.. Data.Text.pack)
+               "">")
+          (Data.Foldable.mapM_
+             (\ talk_a1wF0
+                -> (asWidgetT GHC.Base.. toWidget) (showTalk talk_a1wF0)))
+            (pageItems page)
+          (asWidgetT GHC.Base.. toWidget)
+            ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                GHC.Base.. Data.Text.pack)
+               "</ol>
+")
+          (asWidgetT GHC.Base.. toWidget) ((ellipsed 5) pages)
+/home/val/compsci/haskell/videoarxiv/src/Handlers.hs:69:24-40: Splicing expression
+    widgetFile "talk"
+  ======>
+    do do (asWidgetT GHC.Base.. toWidget)
+            ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                GHC.Base.. Data.Text.pack)
+               "<h2>Talk page</h2>
+")
+          ((Text.Hamlet.maybeH (talkTitle talk))
+             (\ title_a1wFy
+                -> do (asWidgetT GHC.Base.. toWidget)
+                        ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                            GHC.Base.. Data.Text.pack)
+                           "<div class="formSpecs">Title: </div>
+<div class="formData">")
+                      (asWidgetT GHC.Base.. toWidget) (toHtml title_a1wFy)
+                      (asWidgetT GHC.Base.. toWidget)
+                        ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                            GHC.Base.. Data.Text.pack)
+                           "</div>
+<br>
+")))
+            (Just
+               ((asWidgetT GHC.Base.. toWidget)
+                  ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                      GHC.Base.. Data.Text.pack)
+                     "<div></div>
+")))
+          ((Text.Hamlet.maybeH maybeSpeakerAndId)
+             (\ speakerAndId_a1wFz
+                -> do (asWidgetT GHC.Base.. toWidget)
+                        ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                            GHC.Base.. Data.Text.pack)
+                           "<div class="formSpecs">Speaker: </div>
+<div class="formData"><a href="")
+                      (getUrlRenderParams
+                         >>=
+                           (\ urender_a1wFA
+                              -> (asWidgetT GHC.Base.. toWidget)
+                                   (toHtml
+                                      ((\ u_a1wFB -> (urender_a1wFA u_a1wFB) [])
+                                         (SpeakerR
+                                            (fromIntegral
+                                               (fromSqlKey (snd speakerAndId_a1wFz))))))))
+                      (asWidgetT GHC.Base.. toWidget)
+                        ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                            GHC.Base.. Data.Text.pack)
+                           "">")
+                      (asWidgetT GHC.Base.. toWidget) (toHtml (fst speakerAndId_a1wFz))
+                      (asWidgetT GHC.Base.. toWidget)
+                        ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                            GHC.Base.. Data.Text.pack)
+                           "</a>
+</div>
+<br>
+")))
+            (Just
+               ((asWidgetT GHC.Base.. toWidget)
+                  ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                      GHC.Base.. Data.Text.pack)
+                     "<div></div>
+")))
+          ((Text.Hamlet.maybeH (talkAbstract talk))
+             (\ abstract_a1wFC
+                -> do (asWidgetT GHC.Base.. toWidget)
+                        ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                            GHC.Base.. Data.Text.pack)
+                           "<div class="formSpecs">Abstract: </div>
+<div class="formData">")
+                      (asWidgetT GHC.Base.. toWidget) (toHtml abstract_a1wFC)
+                      (asWidgetT GHC.Base.. toWidget)
+                        ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                            GHC.Base.. Data.Text.pack)
+                           "</div>
+<br>
+")))
+            (Just
+               ((asWidgetT GHC.Base.. toWidget)
+                  ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                      GHC.Base.. Data.Text.pack)
+                     "<div></div>
+")))
+          (asWidgetT GHC.Base.. toWidget)
+            ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                GHC.Base.. Data.Text.pack)
+               "<div class="formSpecs">Link: </div>
+<div class="formData"><a href="")
+          (asWidgetT GHC.Base.. toWidget) (toHtml (talkLink talk))
+          (asWidgetT GHC.Base.. toWidget)
+            ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                GHC.Base.. Data.Text.pack)
+               "">")
+          (asWidgetT GHC.Base.. toWidget) (toHtml (talkLink talk))
+          (asWidgetT GHC.Base.. toWidget)
+            ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                GHC.Base.. Data.Text.pack)
+               "</a>
+</div>
+<br>
+")
+          ((Text.Hamlet.maybeH maybeWorkshopAndId)
+             (\ workshopAndId_a1wFD
+                -> do (asWidgetT GHC.Base.. toWidget)
+                        ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                            GHC.Base.. Data.Text.pack)
+                           "<div class="formSpecs">Workshop: </div>
+<div class="formData"><a href="")
+                      (getUrlRenderParams
+                         >>=
+                           (\ urender_a1wFE
+                              -> (asWidgetT GHC.Base.. toWidget)
+                                   (toHtml
+                                      ((\ u_a1wFF -> (urender_a1wFE u_a1wFF) [])
+                                         (WorkshopR
+                                            (fromIntegral
+                                               (fromSqlKey (snd workshopAndId_a1wFD))))))))
+                      (asWidgetT GHC.Base.. toWidget)
+                        ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                            GHC.Base.. Data.Text.pack)
+                           "">    ")
+                      (asWidgetT GHC.Base.. toWidget)
+                        (toHtml (workshopTitle (fst workshopAndId_a1wFD)))
+                      (asWidgetT GHC.Base.. toWidget)
+                        ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                            GHC.Base.. Data.Text.pack)
+                           "</a>
+</div>
+<br>
+")))
+            (Just
+               ((asWidgetT GHC.Base.. toWidget)
+                  ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                      GHC.Base.. Data.Text.pack)
+                     "<div></div>
+")))
+/home/val/compsci/haskell/videoarxiv/src/Handlers.hs:86:24-43: Splicing expression
+    widgetFile "speaker"
+  ======>
+    do do (asWidgetT GHC.Base.. toWidget)
+            ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                GHC.Base.. Data.Text.pack)
+               "<h2>")
+          (asWidgetT GHC.Base.. toWidget) (toHtml speakerFullName)
+          (asWidgetT GHC.Base.. toWidget)
+            ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                GHC.Base.. Data.Text.pack)
+               "</h2>
+")
+          (asWidgetT GHC.Base.. toWidget) ((ellipsed 5) pages)
+          (asWidgetT GHC.Base.. toWidget)
+            ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                GHC.Base.. Data.Text.pack)
+               "
+<ol start="")
+          (asWidgetT GHC.Base.. toWidget) (toHtml (show enumStart))
+          (asWidgetT GHC.Base.. toWidget)
+            ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                GHC.Base.. Data.Text.pack)
+               "">")
+          (Data.Foldable.mapM_
+             (\ talk_a1wIb
+                -> (asWidgetT GHC.Base.. toWidget) (showTalk talk_a1wIb)))
+            (pageItems page)
+          (asWidgetT GHC.Base.. toWidget)
+            ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                GHC.Base.. Data.Text.pack)
+               "</ol>
+")
+          (asWidgetT GHC.Base.. toWidget) ((ellipsed 5) pages)
+/home/val/compsci/haskell/videoarxiv/src/Handlers.hs:101:24-44: Splicing expression
+    widgetFile "workshop"
+  ======>
+    do do (asWidgetT GHC.Base.. toWidget)
+            ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                GHC.Base.. Data.Text.pack)
+               "<h2>")
+          (asWidgetT GHC.Base.. toWidget) (toHtml (workshopTitle workshop))
+          (asWidgetT GHC.Base.. toWidget)
+            ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                GHC.Base.. Data.Text.pack)
+               "</h2>
+")
+          (asWidgetT GHC.Base.. toWidget) ((ellipsed 5) pages)
+          (asWidgetT GHC.Base.. toWidget)
+            ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                GHC.Base.. Data.Text.pack)
+               "
+<ol start="")
+          (asWidgetT GHC.Base.. toWidget) (toHtml (show enumStart))
+          (asWidgetT GHC.Base.. toWidget)
+            ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                GHC.Base.. Data.Text.pack)
+               "">")
+          (Data.Foldable.mapM_
+             (\ talk_a1wIm
+                -> (asWidgetT GHC.Base.. toWidget) (showTalk talk_a1wIm)))
+            (pageItems page)
+          (asWidgetT GHC.Base.. toWidget)
+            ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                GHC.Base.. Data.Text.pack)
+               "</ol>
+")
+          (asWidgetT GHC.Base.. toWidget) ((ellipsed 5) pages)
+/home/val/compsci/haskell/videoarxiv/src/Handlers.hs:111:24-44: Splicing expression
+    widgetFile "speakers"
+  ======>
+    do do (asWidgetT GHC.Base.. toWidget)
+            ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                GHC.Base.. Data.Text.pack)
+               "<h2>Speakers</h2>
+<br>
+")
+          (asWidgetT GHC.Base.. toWidget) ((ellipsed 5) pages)
+          (asWidgetT GHC.Base.. toWidget)
+            ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                GHC.Base.. Data.Text.pack)
+               "
+<ol start="")
+          (asWidgetT GHC.Base.. toWidget) (toHtml (show enumStart))
+          (asWidgetT GHC.Base.. toWidget)
+            ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                GHC.Base.. Data.Text.pack)
+               "">")
+          (Data.Foldable.mapM_
+             (\ speaker_a1wIv
+                -> (asWidgetT GHC.Base.. toWidget) (showSpeaker speaker_a1wIv)))
+            (pageItems page)
+          (asWidgetT GHC.Base.. toWidget)
+            ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                GHC.Base.. Data.Text.pack)
+               "</ol>
+")
+          (asWidgetT GHC.Base.. toWidget) ((ellipsed 5) pages)
+/home/val/compsci/haskell/videoarxiv/src/Handlers.hs:119:24-45: Splicing expression
+    widgetFile "workshops"
+  ======>
+    do do (asWidgetT GHC.Base.. toWidget)
+            ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                GHC.Base.. Data.Text.pack)
+               "<h2>Workshops</h2>
+<br>
+")
+          (asWidgetT GHC.Base.. toWidget) ((ellipsed 5) pages)
+          (asWidgetT GHC.Base.. toWidget)
+            ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                GHC.Base.. Data.Text.pack)
+               "
+<ol start="")
+          (asWidgetT GHC.Base.. toWidget) (toHtml (show enumStart))
+          (asWidgetT GHC.Base.. toWidget)
+            ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                GHC.Base.. Data.Text.pack)
+               "">")
+          (Data.Foldable.mapM_
+             (\ workshop_a1wIE
+                -> (asWidgetT GHC.Base.. toWidget) (showWorkshop workshop_a1wIE)))
+            (pageItems page)
+          (asWidgetT GHC.Base.. toWidget)
+            ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                GHC.Base.. Data.Text.pack)
+               "</ol>
+")
+          (asWidgetT GHC.Base.. toWidget) ((ellipsed 5) pages)
+/home/val/compsci/haskell/videoarxiv/src/Handlers.hs:(128,12)-(132,2): Splicing expression
+    Language.Haskell.TH.Quote.quoteExp
+      whamlet
+      "\n\
+      \<li>\n\
+      \  <a href=@{WorkshopR $ dbIdFromEntity workshopEnt}> \n\
+      \    #{workshopTitle $ entityVal workshopEnt}\n"
+  ======>
+    do (asWidgetT GHC.Base.. toWidget)
+         ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+             GHC.Base.. Data.Text.pack)
+            "<li><a href="")
+       (getUrlRenderParams
+          >>=
+            (\ urender_a1wJy
+               -> (asWidgetT GHC.Base.. toWidget)
+                    (toHtml
+                       ((\ u_a1wJz -> (urender_a1wJy u_a1wJz) [])
+                          (WorkshopR (dbIdFromEntity workshopEnt))))))
+       (asWidgetT GHC.Base.. toWidget)
+         ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+             GHC.Base.. Data.Text.pack)
+            ""> ")
+       (asWidgetT GHC.Base.. toWidget)
+         (toHtml (workshopTitle (entityVal workshopEnt)))
+       (asWidgetT GHC.Base.. toWidget)
+         ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+             GHC.Base.. Data.Text.pack)
+            "</a>
+</li>
+")
+/home/val/compsci/haskell/videoarxiv/src/Handlers.hs:(136,12)-(140,2): Splicing expression
+    Language.Haskell.TH.Quote.quoteExp
+      whamlet
+      "\n\
+      \<li>\n\
+      \  <a href=@{SpeakerR $ dbIdFromEntity speakerEnt}>\n\
+      \    #{speakerLastName $ entityVal speakerEnt}, #{speakerFirstName $ entityVal speakerEnt}\n"
+  ======>
+    do (asWidgetT GHC.Base.. toWidget)
+         ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+             GHC.Base.. Data.Text.pack)
+            "<li><a href="")
+       (getUrlRenderParams
+          >>=
+            (\ urender_a1wJF
+               -> (asWidgetT GHC.Base.. toWidget)
+                    (toHtml
+                       ((\ u_a1wJG -> (urender_a1wJF u_a1wJG) [])
+                          (SpeakerR (dbIdFromEntity speakerEnt))))))
+       (asWidgetT GHC.Base.. toWidget)
+         ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+             GHC.Base.. Data.Text.pack)
+            "">")
+       (asWidgetT GHC.Base.. toWidget)
+         (toHtml (speakerLastName (entityVal speakerEnt)))
+       (asWidgetT GHC.Base.. toWidget)
+         ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+             GHC.Base.. Data.Text.pack)
+            ", ")
+       (asWidgetT GHC.Base.. toWidget)
+         (toHtml (speakerFirstName (entityVal speakerEnt)))
+       (asWidgetT GHC.Base.. toWidget)
+         ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+             GHC.Base.. Data.Text.pack)
+            "</a>
+</li>
+")
+/home/val/compsci/haskell/videoarxiv/src/Handlers.hs:(144,12)-(170,2): Splicing expression
+    Language.Haskell.TH.Quote.quoteExp
+      whamlet
+      "\n\
+      \<li title=\"#{abstract}\">\n\
+      \    <div .formSpecs>\n\
+      \    <a href=@{TalkR $ dbIdFromEntity talkEnt}>\n\
+      \      Title: #\n\
+      \      $maybe title <- talkTitle talk\n\
+      \        <div .formData>\n\
+      \          #{title}\n\
+      \        <br>\n\
+      \      $nothing\n\
+      \        <br>\n\
+      \  $maybe speakerAndId <- maybeSpeakerAndId \n\
+      \    <div .formSpecs>\n\
+      \      Speaker: #\n\
+      \    <div .formData>\n\
+      \      <a href=@{SpeakerR $ fromIntegral $ fromSqlKey $ snd speakerAndId}>\n\
+      \        #{fst speakerAndId}\n\
+      \    <br>\n\
+      \  $nothing\n\
+      \    <div>\n\
+      \  <div .formSpecs>\n\
+      \    Link: #\n\
+      \  <div .formData>\n\
+      \    <a href=\"#{talkLink talk}\">\n\
+      \      #{talkLink talk}\n\
+      \  <br>\n"
+  ======>
+    do (asWidgetT GHC.Base.. toWidget)
+         ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+             GHC.Base.. Data.Text.pack)
+            "<li title="")
+       (asWidgetT GHC.Base.. toWidget) (toHtml abstract)
+       (asWidgetT GHC.Base.. toWidget)
+         ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+             GHC.Base.. Data.Text.pack)
+            ""><div class="formSpecs"></div>
+<a href="")
+       (getUrlRenderParams
+          >>=
+            (\ urender_a1wJT
+               -> (asWidgetT GHC.Base.. toWidget)
+                    (toHtml
+                       ((\ u_a1wJU -> (urender_a1wJT u_a1wJU) [])
+                          (TalkR (dbIdFromEntity talkEnt))))))
+       (asWidgetT GHC.Base.. toWidget)
+         ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+             GHC.Base.. Data.Text.pack)
+            "">Title: ")
+       ((Text.Hamlet.maybeH (talkTitle talk))
+          (\ title_a1wJV
+             -> do (asWidgetT GHC.Base.. toWidget)
+                     ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                         GHC.Base.. Data.Text.pack)
+                        "<div class="formData">")
+                   (asWidgetT GHC.Base.. toWidget) (toHtml title_a1wJV)
+                   (asWidgetT GHC.Base.. toWidget)
+                     ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                         GHC.Base.. Data.Text.pack)
+                        "</div>
+<br>
+")))
+         (Just
+            ((asWidgetT GHC.Base.. toWidget)
+               ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                   GHC.Base.. Data.Text.pack)
+                  "<br>
+")))
+       (asWidgetT GHC.Base.. toWidget)
+         ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+             GHC.Base.. Data.Text.pack)
+            "</a>
+")
+       ((Text.Hamlet.maybeH maybeSpeakerAndId)
+          (\ speakerAndId_a1wJW
+             -> do (asWidgetT GHC.Base.. toWidget)
+                     ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                         GHC.Base.. Data.Text.pack)
+                        "<div class="formSpecs">Speaker: </div>
+<div class="formData"><a href="")
+                   (getUrlRenderParams
+                      >>=
+                        (\ urender_a1wJX
+                           -> (asWidgetT GHC.Base.. toWidget)
+                                (toHtml
+                                   ((\ u_a1wJY -> (urender_a1wJX u_a1wJY) [])
+                                      (SpeakerR
+                                         (fromIntegral (fromSqlKey (snd speakerAndId_a1wJW))))))))
+                   (asWidgetT GHC.Base.. toWidget)
+                     ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                         GHC.Base.. Data.Text.pack)
+                        "">")
+                   (asWidgetT GHC.Base.. toWidget) (toHtml (fst speakerAndId_a1wJW))
+                   (asWidgetT GHC.Base.. toWidget)
+                     ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                         GHC.Base.. Data.Text.pack)
+                        "</a>
+</div>
+<br>
+")))
+         (Just
+            ((asWidgetT GHC.Base.. toWidget)
+               ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+                   GHC.Base.. Data.Text.pack)
+                  "<div></div>
+")))
+       (asWidgetT GHC.Base.. toWidget)
+         ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+             GHC.Base.. Data.Text.pack)
+            "<div class="formSpecs">Link: </div>
+<div class="formData"><a href="")
+       (asWidgetT GHC.Base.. toWidget) (toHtml (talkLink talk))
+       (asWidgetT GHC.Base.. toWidget)
+         ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+             GHC.Base.. Data.Text.pack)
+            "">")
+       (asWidgetT GHC.Base.. toWidget) (toHtml (talkLink talk))
+       (asWidgetT GHC.Base.. toWidget)
+         ((blaze-markup-0.8.2.3:Text.Blaze.Internal.preEscapedText
+             GHC.Base.. Data.Text.pack)
+            "</a>
+</div>
+<br>
+</li>
+")
+
+/home/val/compsci/haskell/videoarxiv/src/Handlers.hs:17:1: warning: [-Wunused-imports]
+    The import of ‘Text.Julius’ is redundant
+      except perhaps to import instances from ‘Text.Julius’
+    To import instances alone, use: import Text.Julius()
+   |
+17 | import Text.Julius (RawJS(..))
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/home/val/compsci/haskell/videoarxiv/src/Handlers.hs:18:1: warning: [-Wunused-imports]
+    The import of ‘Text.Read’ is redundant
+      except perhaps to import instances from ‘Text.Read’
+    To import instances alone, use: import Text.Read()
+   |
+18 | import Text.Read (readMaybe)
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/home/val/compsci/haskell/videoarxiv/src/Handlers.hs:49:24: warning: [-Wtype-defaults]
+    • Defaulting the following constraints to type ‘Integer’
+        (Show a0) arising from a use of ‘show’ at src/Handlers.hs:49:24-40
+        (Num a0) arising from a use of ‘+’ at src/Handlers.hs:48:19-79
+    • In the first argument of ‘toHtml’, namely ‘(show enumStart)’
+      In the first argument of ‘asWidgetT GHC.Base.. toWidget’, namely
+        ‘(toHtml (show enumStart))’
+      In a stmt of a 'do' block:
+        (asWidgetT GHC.Base.. toWidget) (toHtml (show enumStart))
+   |
+49 |   defaultLayout $ do $(widgetFile "home")
+   |                        ^^^^^^^^^^^^^^^^^
+
+/home/val/compsci/haskell/videoarxiv/src/Handlers.hs:86:24: warning: [-Wtype-defaults]
+    • Defaulting the following constraints to type ‘Integer’
+        (Show a0) arising from a use of ‘show’ at src/Handlers.hs:86:24-43
+        (Num a0) arising from a use of ‘+’ at src/Handlers.hs:85:19-79
+    • In the first argument of ‘toHtml’, namely ‘(show enumStart)’
+      In the first argument of ‘asWidgetT GHC.Base.. toWidget’, namely
+        ‘(toHtml (show enumStart))’
+      In a stmt of a 'do' block:
+        (asWidgetT GHC.Base.. toWidget) (toHtml (show enumStart))
+   |
+86 |   defaultLayout $ do $(widgetFile "speaker")
+   |                        ^^^^^^^^^^^^^^^^^^^^
+
+/home/val/compsci/haskell/videoarxiv/src/Handlers.hs:101:24: warning: [-Wtype-defaults]
+    • Defaulting the following constraints to type ‘Integer’
+        (Show a0) arising from a use of ‘show’ at src/Handlers.hs:101:24-44
+        (Num a0) arising from a use of ‘+’ at src/Handlers.hs:100:19-79
+    • In the first argument of ‘toHtml’, namely ‘(show enumStart)’
+      In the first argument of ‘asWidgetT GHC.Base.. toWidget’, namely
+        ‘(toHtml (show enumStart))’
+      In a stmt of a 'do' block:
+        (asWidgetT GHC.Base.. toWidget) (toHtml (show enumStart))
+    |
+101 |   defaultLayout $ do $(widgetFile "workshop")
+    |                        ^^^^^^^^^^^^^^^^^^^^^
+
+/home/val/compsci/haskell/videoarxiv/src/Handlers.hs:111:24: warning: [-Wtype-defaults]
+    • Defaulting the following constraints to type ‘Integer’
+        (Show a0) arising from a use of ‘show’ at src/Handlers.hs:111:24-44
+        (Num a0) arising from a use of ‘+’ at src/Handlers.hs:110:19-79
+    • In the first argument of ‘toHtml’, namely ‘(show enumStart)’
+      In the first argument of ‘asWidgetT GHC.Base.. toWidget’, namely
+        ‘(toHtml (show enumStart))’
+      In a stmt of a 'do' block:
+        (asWidgetT GHC.Base.. toWidget) (toHtml (show enumStart))
+    |
+111 |   defaultLayout $ do $(widgetFile "speakers")
+    |                        ^^^^^^^^^^^^^^^^^^^^^
+
+/home/val/compsci/haskell/videoarxiv/src/Handlers.hs:119:24: warning: [-Wtype-defaults]
+    • Defaulting the following constraints to type ‘Integer’
+        (Show a0) arising from a use of ‘show’ at src/Handlers.hs:119:24-45
+        (Num a0) arising from a use of ‘+’ at src/Handlers.hs:118:19-79
+    • In the first argument of ‘toHtml’, namely ‘(show enumStart)’
+      In the first argument of ‘asWidgetT GHC.Base.. toWidget’, namely
+        ‘(toHtml (show enumStart))’
+      In a stmt of a 'do' block:
+        (asWidgetT GHC.Base.. toWidget) (toHtml (show enumStart))
+    |
+119 |   defaultLayout $ do $(widgetFile "workshops")
+    |                        ^^^^^^^^^^^^^^^^^^^^^^
+[9 of 9] Compiling Application
+/home/val/compsci/haskell/videoarxiv/src/Application.hs:62:1-34: Splicing declarations
+    mkYesodDispatch "App" resourcesApp
+  ======>
+    instance YesodDispatch App where
+      yesodDispatch env8757_a1LEJ req8757_a1LEK
+        = helper8757_a1LEL (Network.Wai.Internal.pathInfo req8757_a1LEK)
+        where
+            helper8757_a1LEL ((:) "static" restPath_a1LEM)
+              = (((((\ parentRunner_a1LEP getSub_a1LEQ toParent_a1LER env_a1LES
+                       -> yesodSubDispatch
+                            Yesod.Core.Types.YesodSubRunnerEnv
+                              {Yesod.Core.Types.ysreParentRunner = parentRunner_a1LEP,
+                               Yesod.Core.Types.ysreGetSub = getSub_a1LEQ,
+                               Yesod.Core.Types.ysreToParentRoute = toParent_a1LER,
+                               Yesod.Core.Types.ysreParentEnv = env_a1LES})
+                      yesodRunner)
+                     (\ sub_a1LET -> appStatic sub_a1LET))
+                    (\ sroute_a1LEU -> StaticR sroute_a1LEU))
+                   env8757_a1LEJ)
+                  (((\ p_a1LEN r_a1LEO
+                       -> r_a1LEO {Network.Wai.Internal.pathInfo = p_a1LEN})
+                      restPath_a1LEM)
+                     req8757_a1LEK)
+            helper8757_a1LEL ((:) "favicon.ico" [])
+              = case Network.Wai.Internal.requestMethod req8757_a1LEK of
+                  "GET"
+                    -> (((yesodRunner getFaviconR) env8757_a1LEJ) (Just FaviconR))
+                         req8757_a1LEK
+                  _ -> (((yesodRunner (void badMethod)) env8757_a1LEJ)
+                          (Just FaviconR))
+                         req8757_a1LEK
+            helper8757_a1LEL ((:) "robots.txt" [])
+              = case Network.Wai.Internal.requestMethod req8757_a1LEK of
+                  "GET"
+                    -> (((yesodRunner getRobotsR) env8757_a1LEJ) (Just RobotsR))
+                         req8757_a1LEK
+                  _ -> (((yesodRunner (void badMethod)) env8757_a1LEJ)
+                          (Just RobotsR))
+                         req8757_a1LEK
+            helper8757_a1LEL []
+              = case Network.Wai.Internal.requestMethod req8757_a1LEK of
+                  "GET"
+                    -> (((yesodRunner getHomeR) env8757_a1LEJ) (Just HomeR))
+                         req8757_a1LEK
+                  _ -> (((yesodRunner (void badMethod)) env8757_a1LEJ) (Just HomeR))
+                         req8757_a1LEK
+            helper8757_a1LEL
+              ((:) "talk" ((:) (fromPathPiece -> Just dyn_a1LEV) []))
+              = case Network.Wai.Internal.requestMethod req8757_a1LEK of
+                  "GET"
+                    -> (((yesodRunner (getTalkR dyn_a1LEV)) env8757_a1LEJ)
+                          (Just (TalkR dyn_a1LEV)))
+                         req8757_a1LEK
+                  _ -> (((yesodRunner (void badMethod)) env8757_a1LEJ)
+                          (Just (TalkR dyn_a1LEV)))
+                         req8757_a1LEK
+            helper8757_a1LEL
+              ((:) "speaker" ((:) (fromPathPiece -> Just dyn_a1LEW) []))
+              = case Network.Wai.Internal.requestMethod req8757_a1LEK of
+                  "GET"
+                    -> (((yesodRunner (getSpeakerR dyn_a1LEW)) env8757_a1LEJ)
+                          (Just (SpeakerR dyn_a1LEW)))
+                         req8757_a1LEK
+                  _ -> (((yesodRunner (void badMethod)) env8757_a1LEJ)
+                          (Just (SpeakerR dyn_a1LEW)))
+                         req8757_a1LEK
+            helper8757_a1LEL
+              ((:) "workshop" ((:) (fromPathPiece -> Just dyn_a1LEX) []))
+              = case Network.Wai.Internal.requestMethod req8757_a1LEK of
+                  "GET"
+                    -> (((yesodRunner (getWorkshopR dyn_a1LEX)) env8757_a1LEJ)
+                          (Just (WorkshopR dyn_a1LEX)))
+                         req8757_a1LEK
+                  _ -> (((yesodRunner (void badMethod)) env8757_a1LEJ)
+                          (Just (WorkshopR dyn_a1LEX)))
+                         req8757_a1LEK
+            helper8757_a1LEL ((:) "speakers" [])
+              = case Network.Wai.Internal.requestMethod req8757_a1LEK of
+                  "GET"
+                    -> (((yesodRunner getSpeakersR) env8757_a1LEJ) (Just SpeakersR))
+                         req8757_a1LEK
+                  _ -> (((yesodRunner (void badMethod)) env8757_a1LEJ)
+                          (Just SpeakersR))
+                         req8757_a1LEK
+            helper8757_a1LEL ((:) "workshops" [])
+              = case Network.Wai.Internal.requestMethod req8757_a1LEK of
+                  "GET"
+                    -> (((yesodRunner getWorkshopsR) env8757_a1LEJ) (Just WorkshopsR))
+                         req8757_a1LEK
+                  _ -> (((yesodRunner (void badMethod)) env8757_a1LEJ)
+                          (Just WorkshopsR))
+                         req8757_a1LEK
+            helper8757_a1LEL _
+              = (((yesodRunner (void notFound)) env8757_a1LEJ) Nothing)
+                  req8757_a1LEK
+/home/val/compsci/haskell/videoarxiv/src/Application.hs:136:12-32: Splicing expression
+    qLocation >>= liftLoc
+  ======>
+    ((((Language.Haskell.TH.Syntax.Loc "src/Application.hs")
+         "videoarxiv-0.0.0-8nPKidvpt0i81qIWu5ZWtH")
+        "Application")
+       (136, 12))
+      (136, 33)
+Preprocessing executable 'videoarxiv' for videoarxiv-0.0.0..
+Building executable 'videoarxiv' for videoarxiv-0.0.0..
+[1 of 3] Compiling DevelMain
+[2 of 3] Compiling Main
+[3 of 3] Compiling Paths_videoarxiv
+Linking .stack-work/dist/x86_64-linux-tinfo6/Cabal-2.4.0.1/build/videoarxiv/videoarxiv ...
+videoarxiv> copy/register
+Installing library in /home/val/compsci/haskell/videoarxiv/.stack-work/install/x86_64-linux-tinfo6/5b4e9c1888107c3ff96bf94bac2e3239f9168cbd1d57431496a544ca29916877/8.6.5/lib/x86_64-linux-ghc-8.6.5/videoarxiv-0.0.0-8nPKidvpt0i81qIWu5ZWtH
+Installing executable videoarxiv in /home/val/compsci/haskell/videoarxiv/.stack-work/install/x86_64-linux-tinfo6/5b4e9c1888107c3ff96bf94bac2e3239f9168cbd1d57431496a544ca29916877/8.6.5/bin
+Registering library for videoarxiv-0.0.0..

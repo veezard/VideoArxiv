@@ -4,6 +4,7 @@ body {
 	    padding:0; 
 	    background:#F8F8F8; 
 	    font-family: "Century Gothic", sans-serif;
+      font-size: 16pt;
 	   
 	} 
 
@@ -106,3 +107,32 @@ hr{
 footer{
   margin: 2% 2%
 }
+
+/*     Pagination     */
+.pagination {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  align-items:center;
+  justify-content:center;
+}
+.next{
+  padding:0 4pt 0 4pt;
+}
+.prev{
+  padding:0 4pt 0 4pt;
+}
+.active{
+  text-decoration:underline;
+  padding:0 4pt 0 4pt;
+}
+.disabled{
+}
+
+/* -------------- */
+
+ol{
+    column-count: 1;
+}
+
+

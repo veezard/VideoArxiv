@@ -21,7 +21,7 @@
   #url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/16/27.yaml
 
 
-resolver: lts-14.27 # Last 8.6.5
+resolver: lts-14.27  # the "natural" version to compile hls with. GHC -8.6.5 
 
 # User packages to be built.
 # Various formats can be used as shown in the example below.
