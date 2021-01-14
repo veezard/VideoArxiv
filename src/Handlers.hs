@@ -43,7 +43,7 @@ getHomeR :: Handler Html
 getHomeR = do
   searchQueryMaybe <- lookupGetParam "query"
   let searchQuery = fromMaybe "" searchQueryMaybe
-  let perPage = 20
+  let perPage = 15
   pages <-
     if searchQuery /= ""
       then runDB $
@@ -82,8 +82,6 @@ getSpeakerR :: Int -> Handler Html
 getSpeakerR requestSpeakerId = do
   speaker <-
     runDB $ get404 (toSqlKey $ fromIntegral requestSpeakerId :: SpeakerId)
-  let speakerFullName =
-        speakerFirstName speaker ++ " " ++ speakerLastName speaker
   let perPage = 20
   pages <-
     runDB $
@@ -113,9 +111,7 @@ getWorkshopR requestWorkshopId = do
 getSpeakersR :: Handler Html
 getSpeakersR = do
   let perPage = 20
-  pages <-
-    runDB $
-    selectPaginated perPage [] [Asc SpeakerLastName, Asc SpeakerFirstName]
+  pages <- runDB $ selectPaginated perPage [] [Asc SpeakerLastName]
   let page = pagesCurrent pages :: Page (Entity Speaker)
   let enumStart = fromIntegral (pageNumber page - 1) * fromIntegral perPage + 1
   defaultLayout $ do $(widgetFile "speakers")
@@ -146,7 +142,7 @@ showSpeaker speakerEnt =
   [whamlet|
 <li>
   <a href=@{SpeakerR $ dbIdFromEntity speakerEnt}>
-    #{speakerLastName $ entityVal speakerEnt}, #{speakerFirstName $ entityVal speakerEnt}
+    #{speakerName $ entityVal speakerEnt}
 |]
 
 showTalk :: Entity Talk -> Widget
@@ -185,8 +181,8 @@ showTalk talkEnt =
     speakerNameEntry = talkSpeakerName talk
     maybeSpeakerAndId = do
       speakerId <- speakerIdEntry
-      speakerName <- speakerNameEntry
-      return (speakerName, speakerId)
+      speakerNm <- speakerNameEntry
+      return (speakerNm, speakerId)
 
 withIndices :: forall a. [a] -> [(a, Int)]
 withIndices list = [(x, i) | i <- [1 .. length list], let x = list !! (i - 1)]

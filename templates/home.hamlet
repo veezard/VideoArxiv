@@ -5,8 +5,8 @@ $else
   <h2>
     Search results for "#{searchQuery}"
 
-^{ellipsed' 5 pages}
+^{ellipsed' 10 pages}
 <ol start="#{show enumStart}">
   $forall talk <- pageItems page
            ^{showTalk talk}
-^{ellipsed' 5 pages}
+^{ellipsed' 10 pages}

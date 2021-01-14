@@ -1,5 +1,5 @@
 <h2>
-  #{speakerFullName}
+  #{speakerName speaker}
 ^{ellipsed' 5 pages}
 <ol start="#{show enumStart}">
   $forall talk <- pageItems page

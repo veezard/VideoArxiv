@@ -3122,3 +3122,11 @@ VERSION_yesod_test	.stack-work/ghci/68f28eb3/cabal_macros.h	478;"	d
 VERSION_yesod_test	.stack-work/ghci/9f088492/cabal_macros.h	500;"	d
 VERSION_yesod_test	.stack-work/ghci/b2feaa64/cabal_macros.h	500;"	d
 VERSION_yesod_test	.stack-work/ghci/de7bdebe/cabal_macros.h	478;"	d
+talk	mtalks_db/mtalks_schema.sql	/^CREATE TABLE talk $/;"	t
+talk.abstract	mtalks_db/mtalks_schema.sql	/^  ,"abstract" VARCHAR NULL$/;"	F
+talk.id	mtalks_db/mtalks_schema.sql	/^  ("id" INTEGER PRIMARY KEY$/;"	F
+talk.link	mtalks_db/mtalks_schema.sql	/^  ,"link" VARCHAR NOT NULL$/;"	F
+talk.speaker_id	mtalks_db/mtalks_schema.sql	/^  ,"speaker_id" INTEGER NULL REFERENCES "speaker"$/;"	F
+talk.speaker_name	mtalks_db/mtalks_schema.sql	/^  ,"speaker_name" VARCHAR NULL$/;"	F
+talk.title	mtalks_db/mtalks_schema.sql	/^  ,"title" VARCHAR NULL$/;"	F
+talk.workshop_id	mtalks_db/mtalks_schema.sql	/^  ,"workshop_id" INTEGER NULL REFERENCES "workshop"$/;"	F

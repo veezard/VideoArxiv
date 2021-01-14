@@ -12,8 +12,8 @@ CREATE VIRTUAL TABLE IF NOT EXISTS "talk" USING fts4
 
 CREATE TABLE IF NOT EXISTS "speaker"
   ("id" INTEGER PRIMARY KEY
-  ,"first_name" VARCHAR NOT NULL
-  ,"last_name" VARCHAR NOT NULL,CONSTRAINT "speaker_name" UNIQUE ("first_name","last_name")
+  ,"name" VARCHAR NOT NULL
+  ,"last_name" VARCHAR NOT NULL,CONSTRAINT "speaker_name" UNIQUE ("name")
   );
 
 CREATE TABLE IF NOT EXISTS "workshop"

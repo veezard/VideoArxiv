@@ -9,9 +9,9 @@ Talk
     workshopId WorkshopId Maybe
     deriving Show
 Speaker
-    firstName Text
+    name Text
     lastName Text
-    SpeakerName firstName lastName
+    SpeakerUniqueName name
     deriving Show
 Workshop
     title Text
