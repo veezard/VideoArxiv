@@ -1,4 +1,30 @@
 $if (searchQuery == "")
+  <h5>
+    This is a searchable repository of links to math videos. 
+    The database is regularly updated with videos from the following websites. 
+    If there is a source of videos which you would like to be added to this list, please send me an email at <a href="mailto:admin@videoarxiv.org">admin@videoarxiv.org</a>. 
+  <ol>
+    <li>
+      <a href="http://scgp.stonybrook.edu/video_portal/">
+        Simons Center
+    <li>
+      <a href="https://mathtube.org/videotype">
+        Mathtube
+    <li>
+      <a href="https://www.msri.org/videos/dashboard">
+        MSRI
+    <li>
+      <a href="https://www.youtube.com/channel/UC4R1IsRVKs_qlWKTm9pT82Q/playlists">
+        IHES
+    <li>
+      <a href="https://video-archive.fields.utoronto.ca/browse/2021/01">
+        Fields Institute
+    <li>
+      <a href="http://www.birs.ca/videos/#gsc.tab=0">
+        Banff
+    <li>
+      <a href="https://www.ias.edu/video">
+        IAS
   <h2>
     All talks
 $else

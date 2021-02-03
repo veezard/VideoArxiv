@@ -52,7 +52,7 @@ getHomeR = do
               [match TalkTitle searchQuery] ||.
               [match TalkAbstract searchQuery])
              []
-      else runDB $ selectPaginated perPage [] []
+      else runDB $ selectPaginated perPage [] [Desc TalkId]
   let page = pagesCurrent pages :: Page (Entity Talk)
   let enumStart = fromIntegral (pageNumber page - 1) * fromIntegral perPage + 1
   defaultLayout $ do $(widgetFile "home")
@@ -113,13 +113,16 @@ getSpeakersR = do
   let initial = maybeInitial & liftM unpack >>= headMay & flip fromMaybe $ 'A'
   let perPage = 20
   speakersToShow <-
-    runDB $ selectList [SpeakerLastName `like` pack (initial : ['%'])] []
+    runDB $
+    selectList
+      [SpeakerLastName `like` pack (initial : ['%'])]
+      [Asc SpeakerLastName]
   defaultLayout $ do $(widgetFile "speakers")
 
 getWorkshopsR :: Handler Html
 getWorkshopsR = do
-  let perPage = 20
-  pages <- runDB $ selectPaginated perPage [] []
+  let perPage = 50
+  pages <- runDB $ selectPaginated perPage [] [Desc WorkshopId]
   let page = pagesCurrent pages :: Page (Entity Workshop)
   let enumStart = fromIntegral (pageNumber page - 1) * fromIntegral perPage + 1
   defaultLayout $ do $(widgetFile "workshops")
